@@ -1,0 +1,10 @@
+anthropic>=1.6
+pandas>=2.0
+numpy
+scipy
+rdkit
+scikit-learn
+torch
+transformers>=4.40
+matplotlib
+python-dotenv

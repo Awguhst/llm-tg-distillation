@@ -1,0 +1,29 @@
+# secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# editor / assistant / OS files
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+
+# Raw downloads (Kaggle Tg file and the ~47 MB PI1M.csv): obtain them with download_data.py
+data/raw/
+
+# The real Tg collection and its training split are not redistributed (see the paper's
+# availability statement); the split is reproducible from the raw file with
+# prepare_real_data.py and seed 42.
+data/train_real.csv
+data/test_real.csv
+
+# Marker of a batch that was submitted but not collected yet
+data/claude_responses/*.pending
+
+# The manuscript folder (LaTeX sources, PDFs, figures, generated tables, notes and the
+# scripts that build them) stays out of the repository.
+paper/
