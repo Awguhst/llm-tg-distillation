@@ -1,0 +1,82 @@
+{
+  "generation_model": "claude-sonnet-5",
+  "generation_thinking": {
+    "type": "disabled"
+  },
+  "generation_prompt_template": "You are an expert polymer chemist. List {n} distinct, real {polymer_class} whose glass transition temperature (Tg) is known from the literature. {hint} {variant}\n\nFor each polymer give:\n- \"smiles\": the repeat unit as a SMILES string with exactly two \"*\" atoms marking the connection points to the neighbouring repeat units (for example polyethylene is \"*CC*\" and polystyrene is \"*CC(*)c1ccccc1\"),\n- \"tg_celsius\": its glass transition temperature in degrees Celsius, as a number.\n\nAnswer with only a JSON array and no other text:\n[{{\"smiles\": \"...\", \"tg_celsius\": number}}, ...]",
+  "generation_variants": [
+    "",
+    "Avoid the most well-known textbook examples; choose polymers a specialist would know.",
+    "Choose polymers that are structurally unusual or rarely listed in tables."
+  ],
+  "generation_requests_sent": 400,
+  "generation_invalid_json_responses": 0,
+  "generation_raw_pairs": 20086,
+  "generation_clean_pairs_before_sampling": 8396,
+  "generation_stop_reason": "hard cap of 400 requests reached",
+  "generation_dates": [
+    "2026-09-16"
+  ],
+  "generation_cost_usd": 5.0118,
+  "zero_shot_requests_sent": 1442,
+  "zero_shot_responses_without_tg": 0,
+  "zero_shot_dates": [
+    "2026-09-16",
+    "2026-09-18"
+  ],
+  "zero_shot_cost_usd": 0.936,
+  "labeling_model": "claude-sonnet-5",
+  "labeling_thinking": {
+    "type": "disabled"
+  },
+  "labeling_prompt_template": "Predict the glass transition temperature (Tg) of the polymer whose repeat unit is this SMILES (the two * atoms are the connection points to the neighbouring units): {smiles}\nAnswer with only this JSON and no other text: {{\"smiles\": \"{smiles}\", \"tg_celsius\": number}}",
+  "labeling_requests_sent": 10000,
+  "labeling_responses_without_tg": 0,
+  "labeling_dates": [
+    "2026-09-16"
+  ],
+  "labeling_cost_usd": 5.2693,
+  "generated_cleaning_counts": {
+    "0_raw": 20086,
+    "1_numeric_tg": 20085,
+    "2_valid_smiles": 19554,
+    "3_two_stars": 18430,
+    "4_tg_in_range": 18430,
+    "5_unique_smiles": 8501,
+    "6_not_in_test": 8396
+  },
+  "generated_in_real_train": 413,
+  "generated_final_size": 8396,
+  "labeled_cleaning_counts": {
+    "0_raw": 10000,
+    "1_numeric_tg": 10000,
+    "2_valid_smiles": 9933,
+    "3_two_stars": 9933,
+    "4_tg_in_range": 9933,
+    "5_unique_smiles": 9933,
+    "6_not_in_test": 9933
+  },
+  "labeled_final_size": 9933,
+  "training_model": "ibm/MoLFormer-XL-both-10pct",
+  "training_epochs": 5,
+  "training_learning_rate": 3e-05,
+  "training_batch_size": 16,
+  "training_device": "cuda",
+  "training_date": "2026-09-18",
+  "dataset_sizes": {
+    "train_real": 5739,
+    "test_real": 1435,
+    "generated_clean": 8396,
+    "labeled_clean": 9933,
+    "small_real": 500
+  },
+  "total_api_cost_usd": 11.2172,
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "zero_shot_requests_repeated_with_higher_limit": 7
+}
