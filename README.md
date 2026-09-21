@@ -94,8 +94,3 @@ Both are downloaded by `pipeline/download_data.py` and are not redistributed her
   doi     = {10.26434/chemrxiv-2026-XXXXX}
 }
 ```
-
-## License
-
-TODO - choose a license before release (MIT or Apache-2.0 for the code; note that the real Tg data
-remain CC BY 4.0 under their original terms).
