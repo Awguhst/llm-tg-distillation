@@ -1,7 +1,7 @@
 """
 Zero-shot baseline (step 3c).
 
-Ask Claude to predict Tg for every polymer in test_real.csv with the same prompt as
+Ask Claude to predict Tg for every polymer in the real test set with the same prompt as
 label_pi1m_with_claude.py. This tells us how accurate the LLM labels are, and gives a
 baseline row in the results table. Predictions go to results/zero_shot_predictions.csv.
 """

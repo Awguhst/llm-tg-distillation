@@ -1,0 +1,62 @@
+{
+  "run": "real_nfull",
+  "group": "B learning curve",
+  "seed": 45,
+  "model": "molformer",
+  "n_real": 5297,
+  "n_train_rows": 5297,
+  "start_weights": "ibm/MoLFormer-XL-both-10pct",
+  "target_mean": 144.02012837455163,
+  "target_std": 113.60462544588037,
+  "learning_rate": 3e-05,
+  "batch_size": 16,
+  "max_tokens": 128,
+  "max_epochs": 30,
+  "patience": 3,
+  "epochs_run": 6,
+  "best_epoch": 3,
+  "best_val_mae": 26.89950397433166,
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse_standardized": 0.216287333998609,
+      "val_mae": 30.60067005410057
+    },
+    {
+      "epoch": 2,
+      "train_mse_standardized": 0.14147429548872986,
+      "val_mae": 29.957971338035698
+    },
+    {
+      "epoch": 3,
+      "train_mse_standardized": 0.11229230874573733,
+      "val_mae": 26.89950397433166
+    },
+    {
+      "epoch": 4,
+      "train_mse_standardized": 0.09812540662954393,
+      "val_mae": 26.919515140449253
+    },
+    {
+      "epoch": 5,
+      "train_mse_standardized": 0.08317625180255338,
+      "val_mae": 28.008823464981365
+    },
+    {
+      "epoch": 6,
+      "train_mse_standardized": 0.0746353010536056,
+      "val_mae": 28.42967095263341
+    }
+  ],
+  "optimizer_steps_to_best": 996,
+  "test": {
+    "mae": 26.346447389811424,
+    "rmse": 36.17515640764019,
+    "r2": 0.8935471912104348,
+    "spearman": 0.951018257944628
+  },
+  "n_test": 1471,
+  "train_seconds": 458,
+  "device": "cuda",
+  "date": "2026-09-20"
+}

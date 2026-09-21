@@ -1,0 +1,20 @@
+{
+  "run": "concat_generated_nfull",
+  "group": "random forest",
+  "seed": 43,
+  "model": "random_forest",
+  "n_real": 5297,
+  "n_train_rows": 12706,
+  "trees": 500,
+  "fingerprint_bits": 2048,
+  "fingerprint_radius": 2,
+  "test": {
+    "mae": 27.426324832753433,
+    "rmse": 39.28736159221136,
+    "r2": 0.8744426855662675,
+    "spearman": 0.9378982584051619
+  },
+  "n_test": 1471,
+  "train_seconds": 417,
+  "date": "2026-09-19"
+}

@@ -1,10 +1,11 @@
-anthropic>=1.6
-pandas>=2.0
-numpy
-scipy
-rdkit
-scikit-learn
-torch
-transformers>=4.40
-matplotlib
-python-dotenv
+# The versions the published results were produced with (Python 3.14).
+anthropic==1.6.0
+pandas==3.0.3
+numpy==2.4.6
+scipy==1.18.0
+rdkit==2026.3.3
+scikit-learn==1.9.0
+torch==2.13.0          # the run used the CUDA 13.0 build (2.13.0+cu130)
+transformers==5.17.0
+matplotlib==3.11.0
+python-dotenv==1.2.2

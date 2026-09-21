@@ -1,6 +1,7 @@
 """
 All settings for the pipeline live in this one file.
 Every script imports it. Change things here, not in the scripts.
+
 """
 import os
 
@@ -15,10 +16,30 @@ RAW_DIR = os.path.join(DATA_DIR, "raw")          # original downloaded files
 CLAUDE_RESPONSES_DIR = os.path.join(DATA_DIR, "claude_responses")  # every raw Claude response, never deleted
 RESULTS_DIR = "results"
 FIGURES_DIR = os.path.join(RESULTS_DIR, "figures")
-PREDICTIONS_DIR = os.path.join(RESULTS_DIR, "predictions")
+PREDICTIONS_DIR = os.path.join(RESULTS_DIR, "predictions")   # per-polymer test predictions, one CSV per run
+RUNS_DIR = os.path.join(RESULTS_DIR, "runs")                 # one small JSON per run: config, best epoch, metrics
+WEIGHTS_DIR = os.path.join(RESULTS_DIR, "stage1_weights")    # best stage-1 weights, reused by every stage-2 run (not for git)
 
 # ---------------------------------------------------------------- input files
-REAL_TG_CSV = os.path.join(RAW_DIR, "Tg_SMILES_class_pid_polyinfo_median.csv")
+# Real Tg data: curated collection of the Jablonka group on Zenodo, CC-BY 4.0.
+# Concept record 14980914; this is its latest version.
+REAL_TG_ZENODO_RECORD = "15789599"
+REAL_TG_DOI = "10.5281/zenodo.15789599"           # version-specific DOI (concept DOI 10.5281/zenodo.14980913)
+REAL_TG_FILE = "LAMALAB_CURATED_Tg_structured_polymerclass_with_embeddings.csv"
+REAL_TG_MD5 = "31400a5f499394e3a6e0658488a464bb"
+REAL_TG_URL = f"https://zenodo.org/api/records/{REAL_TG_ZENODO_RECORD}/files/{REAL_TG_FILE}/content"
+REAL_TG_CSV = os.path.join(RAW_DIR, REAL_TG_FILE)
+# Column names of that file (found by inspection, see prepare_real_data.py). Tg is in kelvin.
+REAL_COLUMNS = {
+    "psmiles": "PSMILES",                  # repeat unit, attachment points written [*]
+    "tg_kelvin": "labels.Exp_Tg(K)",
+    "source": "meta.source",
+    "tg_values": "meta.tg_values",         # list of the individual values, only for polymers with 2+ points
+    "n_points": "meta.num_of_points",
+    "tg_std": "meta.std",                  # sample SD (ddof = 1) of the individual values, 0 for one point
+    "reliability": "meta.reliability",     # black / yellow / gold / red
+    "polymer_class": "meta.polymer_class",
+}
 PI1M_CSV = os.path.join(RAW_DIR, "PI1M.csv")
 # PI1M lives in the GitHub repo of Ruimin Ma. The script tries "master" then "main".
 PI1M_URLS = [
@@ -27,7 +48,9 @@ PI1M_URLS = [
 ]
 
 # ---------------------------------------------------------------- files produced by the pipeline
+REAL_CLEAN_CSV = os.path.join(DATA_DIR, "real_clean.csv")     # all cleaned real polymers before the split
 TRAIN_REAL_CSV = os.path.join(DATA_DIR, "train_real.csv")
+VAL_REAL_CSV = os.path.join(DATA_DIR, "val_real.csv")
 TEST_REAL_CSV = os.path.join(DATA_DIR, "test_real.csv")
 PI1M_SAMPLE_CSV = os.path.join(DATA_DIR, "pi1m_sample.csv")
 GENERATED_RAW_CSV = os.path.join(DATA_DIR, "generated_raw.csv")   # parsed pairs before cleaning
@@ -44,8 +67,9 @@ LABELED_RESPONSES = os.path.join(CLAUDE_RESPONSES_DIR, "labeled.jsonl")
 ZERO_SHOT_RESPONSES = os.path.join(CLAUDE_RESPONSES_DIR, "zero_shot.jsonl")
 
 # ---------------------------------------------------------------- general
-SEED = 42            # data split, PI1M sample, generation sampling: fixed once
-TEST_FRACTION = 0.2
+SEED = 42            # data splits, PI1M sample, generation sampling: fixed once
+TEST_FRACTION = 0.2  # of the cleaned real polymers
+VAL_FRACTION = 0.1   # of the remaining training+validation polymers
 # Training is repeated with these seeds (model initialisation, shuffling, the 500-polymer
 # subset, the random forest). The first one equals SEED so the original run is reused.
 SEEDS = [42, 43, 44, 45, 46]
@@ -124,12 +148,31 @@ TG_MAX_CELSIUS = 500
 REQUIRE_SINGLE_FRAGMENT = False
 
 # ---------------------------------------------------------------- training
-SMALL_REAL_SUBSET = 500
+# Fixed choices; nothing here is tuned.
 MOLFORMER_NAME = "ibm/MoLFormer-XL-both-10pct"
-EPOCHS = 5
 LEARNING_RATE = 3e-5
 BATCH_SIZE = 16
 MAX_SMILES_TOKENS = 128   # SMILES longer than this are truncated by the tokenizer
+EVAL_BATCH_SIZE = 64      # prediction only
 RF_TREES = 500
+RF_JOBS = 4              # CPU cores for the random forest; does not change its result
 FINGERPRINT_BITS = 2048
 FINGERPRINT_RADIUS = 2
+
+# Early stopping on the validation MAE: the validation set
+# is scored after every epoch, the best weights are kept, and training stops after PATIENCE
+# epochs without improvement or at the maximum number of epochs.
+PATIENCE = 3
+MAX_EPOCHS_REAL = 30        # every run whose training set contains real data
+MAX_EPOCHS_STAGE1 = 10      # stage 1: training on a synthetic set only
+
+# Learning curve: nested real subsets 250 < 500 < 1000 < full training set, drawn per seed.
+SUBSET_SIZES = [250, 500, 1000]
+CONTROL_SIZE = 500          # concatenation is run at this size and the full set; the controls at this size
+
+# ---------------------------------------------------------------- analysis
+# Bins for the stratified test errors: measured Tg (C), and the test polymer's maximum
+# Tanimoto similarity to the training set (describe_split.py).
+BOOTSTRAP_RESAMPLES = 1000
+TG_BINS = [-150, 0, 100, 200, 300, 501]   # <0, 0-100, 100-200, 200-300, >=300 C
+SIMILARITY_BINS = [0.0, 0.4, 0.55, 0.7, 0.85, 1.0001]

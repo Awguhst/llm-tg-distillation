@@ -1,0 +1,87 @@
+{
+  "run": "twostage_shuffled_generated_n500",
+  "group": "D controls",
+  "seed": 43,
+  "model": "molformer",
+  "n_real": 500,
+  "n_train_rows": 500,
+  "start_weights": "synthetic_shuffled_generated",
+  "target_mean": 144.33664000000002,
+  "target_std": 113.65823718398038,
+  "learning_rate": 3e-05,
+  "batch_size": 16,
+  "max_tokens": 128,
+  "max_epochs": 30,
+  "patience": 3,
+  "epochs_run": 11,
+  "best_epoch": 8,
+  "best_val_mae": 39.53665390299617,
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse_standardized": 0.7426182374954223,
+      "val_mae": 65.2668485025558
+    },
+    {
+      "epoch": 2,
+      "train_mse_standardized": 0.49203870034217834,
+      "val_mae": 52.12116777611103
+    },
+    {
+      "epoch": 3,
+      "train_mse_standardized": 0.36733304858207705,
+      "val_mae": 49.01748637952303
+    },
+    {
+      "epoch": 4,
+      "train_mse_standardized": 0.3324506947398186,
+      "val_mae": 47.52306313273457
+    },
+    {
+      "epoch": 5,
+      "train_mse_standardized": 0.29169523441791534,
+      "val_mae": 42.77128621436542
+    },
+    {
+      "epoch": 6,
+      "train_mse_standardized": 0.24280791699886323,
+      "val_mae": 40.465284601026966
+    },
+    {
+      "epoch": 7,
+      "train_mse_standardized": 0.24461972177028657,
+      "val_mae": 39.88755370523812
+    },
+    {
+      "epoch": 8,
+      "train_mse_standardized": 0.21518336474895478,
+      "val_mae": 39.53665390299617
+    },
+    {
+      "epoch": 9,
+      "train_mse_standardized": 0.200752086520195,
+      "val_mae": 39.639342677791575
+    },
+    {
+      "epoch": 10,
+      "train_mse_standardized": 0.1826357600092888,
+      "val_mae": 41.37265510131629
+    },
+    {
+      "epoch": 11,
+      "train_mse_standardized": 0.16949505189061165,
+      "val_mae": 39.710513980781286
+    }
+  ],
+  "optimizer_steps_to_best": 256,
+  "test": {
+    "mae": 42.256095188122714,
+    "rmse": 57.27550676683495,
+    "r2": 0.733145721176971,
+    "spearman": 0.8747002595810075
+  },
+  "n_test": 1471,
+  "train_seconds": 114,
+  "device": "cuda",
+  "date": "2026-09-20"
+}

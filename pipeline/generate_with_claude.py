@@ -15,7 +15,7 @@ import pandas as pd
 
 import config
 from common import claude_batches, prompts, run_info
-from common.cleaning import clean_dataset, print_counts
+from common.cleaning import KeySet, clean_dataset, print_counts
 
 
 def request_settings(i):
@@ -58,7 +58,10 @@ def parsed_pairs(saved):
 # ---------------------------------------------------------------- main loop
 
 client = claude_batches.get_client()
-test_smiles = set(pd.read_csv(config.TEST_REAL_CSV)["smiles"])
+# All 400 requests of the published run are saved, so this script sends nothing more; it only
+# rebuilds data/generated_raw.csv.
+held_out = {"test": KeySet(pd.read_csv(config.TEST_REAL_CSV)["smiles"]),
+            "validation": KeySet(pd.read_csv(config.VAL_REAL_CSV)["smiles"])}
 round_size = config.PILOT_GENERATION_REQUESTS if config.PILOT else config.GENERATION_ROUND_REQUESTS
 max_requests = config.PILOT_GENERATION_REQUESTS if config.PILOT else config.GENERATION_MAX_REQUESTS
 stop_reason = None
@@ -66,7 +69,7 @@ stop_reason = None
 while True:
     saved = claude_batches.load_saved_responses(config.GENERATED_RESPONSES)
     raw, n_invalid = parsed_pairs(saved)
-    clean, counts = clean_dataset(raw, test_smiles) if len(raw) > 0 else (raw, {})
+    clean, counts = clean_dataset(raw, held_out) if len(raw) > 0 else (raw, {})
     print(f"\nSaved responses: {len(saved)} ({n_invalid} with invalid JSON) -> "
           f"{len(raw)} raw pairs -> {len(clean)} clean unique pairs (target {config.GENERATION_TARGET})")
 

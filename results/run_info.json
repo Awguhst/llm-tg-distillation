@@ -1,4 +1,121 @@
 {
+  "real_dataset": {
+    "zenodo_record": "15789599",
+    "doi": "10.5281/zenodo.15789599",
+    "file": "LAMALAB_CURATED_Tg_structured_polymerclass_with_embeddings.csv",
+    "md5": "31400a5f499394e3a6e0658488a464bb",
+    "licence": "CC-BY 4.0",
+    "rows": 7367,
+    "columns_in_file": 115
+  },
+  "real_cleaning_counts": {
+    "0_raw": 7367,
+    "2_valid_smiles": 7367,
+    "3_two_stars": 7367,
+    "4_tg_in_range": 7367,
+    "5a_unique_exact_smiles": 7367,
+    "5b_unique_either_key": 7357
+  },
+  "real_reliability_counts_raw": {
+    "black": 7088,
+    "gold": 143,
+    "yellow": 132,
+    "red": 4
+  },
+  "real_source_counts_raw": {
+    "GREA": 7170,
+    "Qiu": 152,
+    "Xie": 21,
+    "Schrodinger": 15,
+    "Nguyen": 7,
+    "Uchicago": 2
+  },
+  "real_ring_key_not_computable": 1358,
+  "split": {
+    "method": "random; cleaned polymers deduplicated on either key, shuffled (pandas sample, frac=1), first TEST_FRACTION = test; the rest shuffled again, first VAL_FRACTION = validation",
+    "seed": 42,
+    "test_fraction": 0.2,
+    "val_fraction": 0.1,
+    "sizes_and_tg": {
+      "train": {
+        "n": 5297,
+        "tg_mean": 144.0,
+        "tg_sd": 113.6,
+        "tg_min": -139.0,
+        "tg_median": 135.0,
+        "tg_max": 490.0,
+        "n_with_2plus_points": 208
+      },
+      "validation": {
+        "n": 589,
+        "tg_mean": 147.0,
+        "tg_sd": 109.0,
+        "tg_min": -104.0,
+        "tg_median": 147.0,
+        "tg_max": 395.0,
+        "n_with_2plus_points": 26
+      },
+      "test": {
+        "n": 1471,
+        "tg_mean": 141.8,
+        "tg_sd": 110.9,
+        "tg_min": -129.0,
+        "tg_median": 137.0,
+        "tg_max": 495.0,
+        "n_with_2plus_points": 54
+      }
+    }
+  },
+  "test_similarity_to_train": {
+    "fingerprint": "Morgan radius 2, 2048 bits, Tanimoto",
+    "quantiles": {
+      "q5": 0.456,
+      "q25": 0.667,
+      "q50": 0.808,
+      "q75": 0.941,
+      "q95": 1.0
+    },
+    "bins": {
+      "[0.0, 0.4)": 34,
+      "[0.4, 0.55)": 135,
+      "[0.55, 0.7)": 281,
+      "[0.7, 0.85)": 413,
+      "[0.85, 1.0)": 608
+    },
+    "n_identical_fingerprint": 252
+  },
+  "generated_cleaning_counts": {
+    "0_raw": 20086,
+    "1_numeric_tg": 20085,
+    "2_valid_smiles": 19554,
+    "3_two_stars": 18430,
+    "4_tg_in_range": 18430,
+    "5a_unique_exact_smiles": 8501,
+    "5b_unique_either_key": 8077,
+    "removed_test_exact": 79,
+    "removed_test_ring": 32,
+    "6a_not_in_test": 7966,
+    "removed_validation_exact": 27,
+    "removed_validation_ring": 27,
+    "6b_not_in_validation": 7912
+  },
+  "generated_final_size": 7912,
+  "labeled_cleaning_counts": {
+    "0_raw": 10000,
+    "1_numeric_tg": 10000,
+    "2_valid_smiles": 9933,
+    "3_two_stars": 9933,
+    "4_tg_in_range": 9933,
+    "5a_unique_exact_smiles": 9933,
+    "5b_unique_either_key": 9929,
+    "removed_test_exact": 1,
+    "removed_test_ring": 2,
+    "6a_not_in_test": 9926,
+    "removed_validation_exact": 1,
+    "removed_validation_ring": 0,
+    "6b_not_in_validation": 9925
+  },
+  "labeled_final_size": 9925,
   "generation_model": "claude-sonnet-5",
   "generation_thinking": {
     "type": "disabled"
@@ -18,13 +135,6 @@
     "2026-09-16"
   ],
   "generation_cost_usd": 5.0118,
-  "zero_shot_requests_sent": 1442,
-  "zero_shot_responses_without_tg": 0,
-  "zero_shot_dates": [
-    "2026-09-16",
-    "2026-09-18"
-  ],
-  "zero_shot_cost_usd": 0.936,
   "labeling_model": "claude-sonnet-5",
   "labeling_thinking": {
     "type": "disabled"
@@ -36,47 +146,109 @@
     "2026-09-16"
   ],
   "labeling_cost_usd": 5.2693,
-  "generated_cleaning_counts": {
-    "0_raw": 20086,
-    "1_numeric_tg": 20085,
-    "2_valid_smiles": 19554,
-    "3_two_stars": 18430,
-    "4_tg_in_range": 18430,
-    "5_unique_smiles": 8501,
-    "6_not_in_test": 8396
-  },
-  "generated_in_real_train": 413,
-  "generated_final_size": 8396,
-  "labeled_cleaning_counts": {
-    "0_raw": 10000,
-    "1_numeric_tg": 10000,
-    "2_valid_smiles": 9933,
-    "3_two_stars": 9933,
-    "4_tg_in_range": 9933,
-    "5_unique_smiles": 9933,
-    "6_not_in_test": 9933
-  },
-  "labeled_final_size": 9933,
-  "training_model": "ibm/MoLFormer-XL-both-10pct",
-  "training_epochs": 5,
-  "training_learning_rate": 3e-05,
-  "training_batch_size": 16,
-  "training_device": "cuda",
-  "training_date": "2026-09-18",
-  "dataset_sizes": {
-    "train_real": 5739,
-    "test_real": 1435,
-    "generated_clean": 8396,
-    "labeled_clean": 9933,
-    "small_real": 500
-  },
-  "total_api_cost_usd": 11.2172,
-  "training_seeds": [
-    42,
-    43,
-    44,
-    45,
-    46
+  "generated_unique_before_removal": 8077,
+  "generated_matching_any_real_polymer": 668,
+  "labeled_unique_before_removal": 9929,
+  "labeled_matching_any_real_polymer": 11,
+  "zero_shot_requests_sent": 1483,
+  "zero_shot_requests_repeated_with_higher_limit": 12,
+  "zero_shot_responses_without_tg": 0,
+  "zero_shot_dates": [
+    "2026-09-19"
   ],
-  "zero_shot_requests_repeated_with_higher_limit": 7
+  "zero_shot_cost_usd": 0.9782,
+  "zero_shot_metrics": {
+    "n": 1471,
+    "mae": 37.308616587355544,
+    "mae_ci95": [
+      35.719041723317474,
+      39.09608897008838
+    ],
+    "rmse": 50.00643823080115,
+    "r2": 0.7965825832126041,
+    "spearman": 0.9076459275063484,
+    "mean_signed_error": -3.3547620666213493,
+    "percent_multiples_of_5": 99.32019034670292,
+    "percent_multiples_of_10": 63.90210740992522,
+    "distinct_values": 90
+  },
+  "api_cost": [
+    {
+      "task": "generation",
+      "requests": 400,
+      "requests_full_price": 0,
+      "input_tokens": 103400,
+      "output_tokens": 981683,
+      "cost_usd": 5.0118,
+      "dates": "2026-09-16"
+    },
+    {
+      "task": "labeling of PI1M",
+      "requests": 10000,
+      "requests_full_price": 1,
+      "input_tokens": 1876376,
+      "output_tokens": 678468,
+      "cost_usd": 5.2693,
+      "dates": "2026-09-16"
+    },
+    {
+      "task": "zero-shot on the test set",
+      "requests": 1483,
+      "requests_full_price": 12,
+      "input_tokens": 329435,
+      "output_tokens": 125872,
+      "cost_usd": 0.9782,
+      "dates": "2026-09-19"
+    },
+    {
+      "task": "total",
+      "requests": 11883,
+      "requests_full_price": 13,
+      "input_tokens": 2309211,
+      "output_tokens": 1786023,
+      "cost_usd": 11.2593,
+      "dates": ""
+    }
+  ],
+  "total_api_cost_usd": 11.2593,
+  "training": {
+    "model": "ibm/MoLFormer-XL-both-10pct",
+    "learning_rate": 3e-05,
+    "batch_size": 16,
+    "max_tokens": 128,
+    "early_stopping": "validation MAE, best weights kept",
+    "patience": 3,
+    "max_epochs_real": 30,
+    "max_epochs_stage1": 10,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "subset_sizes": [
+      250,
+      500,
+      1000
+    ],
+    "runs_completed": 160,
+    "gpu_hours_molformer": 25.98,
+    "cpu_hours_random_forest": 3.18
+  },
+  "inference_noise": {
+    "note": "deterministic_eval = False, left as in v1; ten forward passes of each stage-1 model on the test set",
+    "mae_sd_between_passes_mean": 0.1313,
+    "per_polymer_prediction_sd_mean": 4.9552998542785645
+  },
+  "software": {
+    "python": "3.14.4",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.17.0",
+    "rdkit": "2026.03.3",
+    "scikit-learn": "1.9.0",
+    "pandas": "3.0.3",
+    "numpy": "2.4.6",
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU"
+  }
 }

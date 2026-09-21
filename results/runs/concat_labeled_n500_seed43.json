@@ -1,0 +1,83 @@
+{
+  "run": "concat_labeled_n500",
+  "group": "C concatenation",
+  "seed": 43,
+  "model": "molformer",
+  "n_real": 500,
+  "n_train_rows": 10423,
+  "start_weights": "ibm/MoLFormer-XL-both-10pct",
+  "target_mean": 61.55821932265184,
+  "target_std": 86.53783166183209,
+  "learning_rate": 3e-05,
+  "batch_size": 16,
+  "max_tokens": 128,
+  "max_epochs": 30,
+  "patience": 3,
+  "epochs_run": 10,
+  "best_epoch": 7,
+  "best_val_mae": 33.17639854923371,
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse_standardized": 0.1569451925368086,
+      "val_mae": 38.346883779244024
+    },
+    {
+      "epoch": 2,
+      "train_mse_standardized": 0.0776342533923386,
+      "val_mae": 36.03094573249234
+    },
+    {
+      "epoch": 3,
+      "train_mse_standardized": 0.06351176256341262,
+      "val_mae": 38.26705771570902
+    },
+    {
+      "epoch": 4,
+      "train_mse_standardized": 0.057261511011174784,
+      "val_mae": 35.79810691043355
+    },
+    {
+      "epoch": 5,
+      "train_mse_standardized": 0.04853880260460301,
+      "val_mae": 33.87687423550617
+    },
+    {
+      "epoch": 6,
+      "train_mse_standardized": 0.043917507926098824,
+      "val_mae": 35.212855384321486
+    },
+    {
+      "epoch": 7,
+      "train_mse_standardized": 0.04578136400090268,
+      "val_mae": 33.17639854923371
+    },
+    {
+      "epoch": 8,
+      "train_mse_standardized": 0.04406363829726606,
+      "val_mae": 35.431563024342765
+    },
+    {
+      "epoch": 9,
+      "train_mse_standardized": 0.03589810313415495,
+      "val_mae": 34.96623605841489
+    },
+    {
+      "epoch": 10,
+      "train_mse_standardized": 0.03207100829327391,
+      "val_mae": 38.50581926394399
+    }
+  ],
+  "optimizer_steps_to_best": 4564,
+  "test": {
+    "mae": 33.71592698346831,
+    "rmse": 47.065616488626475,
+    "r2": 0.8198045614031563,
+    "spearman": 0.917548619040454
+  },
+  "n_test": 1471,
+  "train_seconds": 31984,
+  "device": "cuda",
+  "date": "2026-09-20",
+  "synthetic_rows_dropped_as_duplicates_of_real": 2
+}

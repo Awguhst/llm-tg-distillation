@@ -1,0 +1,83 @@
+{
+  "run": "concat_labeled_n500",
+  "group": "C concatenation",
+  "seed": 42,
+  "model": "molformer",
+  "n_real": 500,
+  "n_train_rows": 10423,
+  "start_weights": "ibm/MoLFormer-XL-both-10pct",
+  "target_mean": 61.27475870670633,
+  "target_std": 86.29446923466213,
+  "learning_rate": 3e-05,
+  "batch_size": 16,
+  "max_tokens": 128,
+  "max_epochs": 30,
+  "patience": 3,
+  "epochs_run": 10,
+  "best_epoch": 7,
+  "best_val_mae": 31.417350075661837,
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse_standardized": 0.11455408355361793,
+      "val_mae": 36.522308851802286
+    },
+    {
+      "epoch": 2,
+      "train_mse_standardized": 0.07205579266599738,
+      "val_mae": 40.05829598107848
+    },
+    {
+      "epoch": 3,
+      "train_mse_standardized": 0.06321938521534584,
+      "val_mae": 34.32509862928925
+    },
+    {
+      "epoch": 4,
+      "train_mse_standardized": 0.05458778816826694,
+      "val_mae": 33.66203756115432
+    },
+    {
+      "epoch": 5,
+      "train_mse_standardized": 0.046574570586529425,
+      "val_mae": 32.97297086239671
+    },
+    {
+      "epoch": 6,
+      "train_mse_standardized": 0.04221649985975969,
+      "val_mae": 35.77470240400279
+    },
+    {
+      "epoch": 7,
+      "train_mse_standardized": 0.03958914563264246,
+      "val_mae": 31.417350075661837
+    },
+    {
+      "epoch": 8,
+      "train_mse_standardized": 0.03684095264833582,
+      "val_mae": 33.04953049522102
+    },
+    {
+      "epoch": 9,
+      "train_mse_standardized": 0.033620107630904825,
+      "val_mae": 35.763721410625045
+    },
+    {
+      "epoch": 10,
+      "train_mse_standardized": 0.028984330153137595,
+      "val_mae": 36.703452018906184
+    }
+  ],
+  "optimizer_steps_to_best": 4564,
+  "test": {
+    "mae": 32.44831811491281,
+    "rmse": 45.596833303002626,
+    "r2": 0.8308758395000079,
+    "spearman": 0.9210263789963588
+  },
+  "n_test": 1471,
+  "train_seconds": 1194,
+  "device": "cuda",
+  "date": "2026-09-19",
+  "synthetic_rows_dropped_as_duplicates_of_real": 2
+}

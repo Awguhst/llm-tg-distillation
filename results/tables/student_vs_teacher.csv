@@ -1,0 +1,11 @@
+student,seed,student MAE - teacher MAE,CI 2.5 %,CI 97.5 %,CI excludes 0
+synthetic_generated,42,0.4,-1.13,2.01,False
+synthetic_generated,43,-0.78,-2.24,0.65,False
+synthetic_generated,44,-1.15,-2.5,0.33,False
+synthetic_generated,45,-0.57,-1.96,0.96,False
+synthetic_generated,46,-0.27,-1.72,1.08,False
+synthetic_labeled,42,2.15,0.97,3.3,True
+synthetic_labeled,43,0.75,-0.39,2.01,False
+synthetic_labeled,44,1.61,0.45,2.83,True
+synthetic_labeled,45,0.47,-0.59,1.55,False
+synthetic_labeled,46,0.98,-0.04,2.13,False

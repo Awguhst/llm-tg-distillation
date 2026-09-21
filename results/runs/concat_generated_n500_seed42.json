@@ -1,0 +1,88 @@
+{
+  "run": "concat_generated_n500",
+  "group": "C concatenation",
+  "seed": 42,
+  "model": "molformer",
+  "n_real": 500,
+  "n_train_rows": 8365,
+  "start_weights": "ibm/MoLFormer-XL-both-10pct",
+  "target_mean": 88.33261326957562,
+  "target_std": 99.4552191933917,
+  "learning_rate": 3e-05,
+  "batch_size": 16,
+  "max_tokens": 128,
+  "max_epochs": 30,
+  "patience": 3,
+  "epochs_run": 11,
+  "best_epoch": 8,
+  "best_val_mae": 30.703925077635887,
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse_standardized": 0.14756503869816706,
+      "val_mae": 37.4450211687849
+    },
+    {
+      "epoch": 2,
+      "train_mse_standardized": 0.09465397511209761,
+      "val_mae": 33.58489393250444
+    },
+    {
+      "epoch": 3,
+      "train_mse_standardized": 0.08218799959968395,
+      "val_mae": 33.76965655237791
+    },
+    {
+      "epoch": 4,
+      "train_mse_standardized": 0.0684427448957535,
+      "val_mae": 32.6417313712724
+    },
+    {
+      "epoch": 5,
+      "train_mse_standardized": 0.06170202805585513,
+      "val_mae": 30.780292647253273
+    },
+    {
+      "epoch": 6,
+      "train_mse_standardized": 0.05484690861125158,
+      "val_mae": 31.681213696517037
+    },
+    {
+      "epoch": 7,
+      "train_mse_standardized": 0.04964976631020331,
+      "val_mae": 33.23969850808938
+    },
+    {
+      "epoch": 8,
+      "train_mse_standardized": 0.045730369725112636,
+      "val_mae": 30.703925077635887
+    },
+    {
+      "epoch": 9,
+      "train_mse_standardized": 0.04048638157301582,
+      "val_mae": 34.80761611783039
+    },
+    {
+      "epoch": 10,
+      "train_mse_standardized": 0.03781353025399349,
+      "val_mae": 31.11865494758852
+    },
+    {
+      "epoch": 11,
+      "train_mse_standardized": 0.035880690368612723,
+      "val_mae": 31.88445822801574
+    }
+  ],
+  "optimizer_steps_to_best": 4184,
+  "test": {
+    "mae": 32.58639130790083,
+    "rmse": 45.162428903043605,
+    "r2": 0.8340830056692565,
+    "spearman": 0.9214192661575923
+  },
+  "n_test": 1471,
+  "train_seconds": 974,
+  "device": "cuda",
+  "date": "2026-09-19",
+  "synthetic_rows_dropped_as_duplicates_of_real": 47
+}

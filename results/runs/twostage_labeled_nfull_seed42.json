@@ -1,0 +1,87 @@
+{
+  "run": "twostage_labeled_nfull",
+  "group": "B learning curve",
+  "seed": 42,
+  "model": "molformer",
+  "n_real": 5297,
+  "n_train_rows": 5297,
+  "start_weights": "synthetic_labeled",
+  "target_mean": 144.02012837455163,
+  "target_std": 113.60462544588037,
+  "learning_rate": 3e-05,
+  "batch_size": 16,
+  "max_tokens": 128,
+  "max_epochs": 30,
+  "patience": 3,
+  "epochs_run": 11,
+  "best_epoch": 8,
+  "best_val_mae": 22.993219734023505,
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse_standardized": 0.16335429225313183,
+      "val_mae": 27.056426153782066
+    },
+    {
+      "epoch": 2,
+      "train_mse_standardized": 0.12184723117694274,
+      "val_mae": 27.79112804937444
+    },
+    {
+      "epoch": 3,
+      "train_mse_standardized": 0.10260228957535693,
+      "val_mae": 31.730766580319365
+    },
+    {
+      "epoch": 4,
+      "train_mse_standardized": 0.10681273579057352,
+      "val_mae": 25.45303156543466
+    },
+    {
+      "epoch": 5,
+      "train_mse_standardized": 0.07274847273458669,
+      "val_mae": 28.22948498970381
+    },
+    {
+      "epoch": 6,
+      "train_mse_standardized": 0.06284017127457522,
+      "val_mae": 25.203195598712394
+    },
+    {
+      "epoch": 7,
+      "train_mse_standardized": 0.055951842531310074,
+      "val_mae": 23.521303690730615
+    },
+    {
+      "epoch": 8,
+      "train_mse_standardized": 0.050895092767298124,
+      "val_mae": 22.993219734023505
+    },
+    {
+      "epoch": 9,
+      "train_mse_standardized": 0.04992625672332921,
+      "val_mae": 27.459128202946765
+    },
+    {
+      "epoch": 10,
+      "train_mse_standardized": 0.047065561379529136,
+      "val_mae": 25.961217304741385
+    },
+    {
+      "epoch": 11,
+      "train_mse_standardized": 0.03934240365371768,
+      "val_mae": 27.72680597120716
+    }
+  ],
+  "optimizer_steps_to_best": 2656,
+  "test": {
+    "mae": 23.661934355340954,
+    "rmse": 33.15391777826625,
+    "r2": 0.9105859015341576,
+    "spearman": 0.9581482044044229
+  },
+  "n_test": 1471,
+  "train_seconds": 872,
+  "device": "cuda",
+  "date": "2026-09-19"
+}

@@ -1,0 +1,58 @@
+{
+  "run": "concat_labeled_n500",
+  "group": "C concatenation",
+  "seed": 45,
+  "model": "molformer",
+  "n_real": 500,
+  "n_train_rows": 10424,
+  "start_weights": "ibm/MoLFormer-XL-both-10pct",
+  "target_mean": 61.66798733691481,
+  "target_std": 86.64446229677431,
+  "learning_rate": 3e-05,
+  "batch_size": 16,
+  "max_tokens": 128,
+  "max_epochs": 30,
+  "patience": 3,
+  "epochs_run": 5,
+  "best_epoch": 2,
+  "best_val_mae": 32.0416498636916,
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse_standardized": 0.12327017354352238,
+      "val_mae": 35.78698786581717
+    },
+    {
+      "epoch": 2,
+      "train_mse_standardized": 0.0767495607012341,
+      "val_mae": 32.0416498636916
+    },
+    {
+      "epoch": 3,
+      "train_mse_standardized": 0.06398142402504191,
+      "val_mae": 32.88479164745285
+    },
+    {
+      "epoch": 4,
+      "train_mse_standardized": 0.05589225740584381,
+      "val_mae": 37.09116059994657
+    },
+    {
+      "epoch": 5,
+      "train_mse_standardized": 0.05006790313803958,
+      "val_mae": 39.191204662614446
+    }
+  ],
+  "optimizer_steps_to_best": 1304,
+  "test": {
+    "mae": 33.287533429092,
+    "rmse": 46.041745946375215,
+    "r2": 0.8275592678447422,
+    "spearman": 0.9173992142468478
+  },
+  "n_test": 1471,
+  "train_seconds": 602,
+  "device": "cuda",
+  "date": "2026-09-20",
+  "synthetic_rows_dropped_as_duplicates_of_real": 1
+}

@@ -1,0 +1,1790 @@
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+)) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+ (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty))
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty)
+ (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/preprint\authblk.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty))) (tables/numbers.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def) (main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-english.trsl)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
+(sections/abstract.tex) (sections/introduction.tex
+
+Package natbib Warning: Citation `audus2017polymerinformatics' on page 1 undefi
+ned on input line 4.
+
+
+Package natbib Warning: Citation `chen2021polymerinformatics' on page 1 undefin
+ed on input line 4.
+
+
+Package natbib Warning: Citation `ramprasad2017ml' on page 1 undefined on input
+ line 4.
+
+
+Package natbib Warning: Citation `otsuka2011polyinfo' on page 1 undefined on in
+put line 4.
+
+
+Package natbib Warning: Citation `ma2020pi1m' on page 1 undefined on input line
+ 4.
+
+
+Package natbib Warning: Citation `tao2021benchmarking' on page 1 undefined on i
+nput line 4.
+
+
+Package natbib Warning: Citation `uddin2024interpretable' on page 1 undefined o
+n input line 4.
+
+
+Package natbib Warning: Citation `lamalab_tg_dataset' on page 1 undefined on in
+put line 4.
+
+
+Package natbib Warning: Citation `kuenneth2021multitask' on page 1 undefined on
+ input line 4.
+
+
+Package natbib Warning: Citation `kuenneth2023polybert' on page 1 undefined on 
+input line 4.
+
+
+Package natbib Warning: Citation `xu2023transpolymer' on page 1 undefined on in
+put line 4.
+
+
+Package natbib Warning: Citation `gurnani2023polygnn' on page 1 undefined on in
+put line 4.
+
+
+Package natbib Warning: Citation `ma2020pi1m' on page 1 undefined on input line
+ 4.
+
+[1{C:/Users/asdfg/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/as
+dfg/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/asdfg/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/asdfg/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/asdfg/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+
+Package natbib Warning: Citation `hinton2015distilling' on page 2 undefined on 
+input line 8.
+
+
+Package natbib Warning: Citation `west2022symbolic' on page 2 undefined on inpu
+t line 8.
+
+
+Package natbib Warning: Citation `wang2021gpt3label' on page 2 undefined on inp
+ut line 8.
+
+
+Package natbib Warning: Citation `gilardi2023chatgpt' on page 2 undefined on in
+put line 8.
+
+
+Package natbib Warning: Citation `ding2023annotator' on page 2 undefined on inp
+ut line 8.
+
+
+Package natbib Warning: Citation `wang2023selfinstruct' on page 2 undefined on 
+input line 8.
+
+
+Package natbib Warning: Citation `west2022symbolic' on page 2 undefined on inpu
+t line 8.
+
+
+Package natbib Warning: Citation `hsieh2023distilling' on page 2 undefined on i
+nput line 8.
+
+
+Package natbib Warning: Citation `seedat2024cllm' on page 2 undefined on input 
+line 8.
+
+
+Package natbib Warning: Citation `dagdelen2024extraction' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `polak2024extracting' on page 2 undefined on i
+nput line 8.
+
+
+Package natbib Warning: Citation `zheng2023chatgptmof' on page 2 undefined on i
+nput line 8.
+
+
+Package natbib Warning: Citation `jablonka2024leveraging' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `vanherck2025finetuned' on page 2 undefined on
+ input line 8.
+
+
+Package natbib Warning: Citation `polymerllm2025' on page 2 undefined on input 
+line 8.
+
+
+Package natbib Warning: Citation `mirza2025framework' on page 2 undefined on in
+put line 8.
+
+
+Package natbib Warning: Citation `guo2023whatcan' on page 2 undefined on input 
+line 8.
+
+
+Package natbib Warning: Citation `white2023assessment' on page 2 undefined on i
+nput line 8.
+
+
+Package natbib Warning: Citation `castro2023understand' on page 2 undefined on 
+input line 8.
+
+
+Package natbib Warning: Citation `carlini2021extracting' on page 2 undefined on
+ input line 8.
+
+
+Package natbib Warning: Citation `carlini2023quantifying' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `magar2022contamination' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `sainz2023contamination' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `shumailov2024collapse' on page 2 undefined on
+ input line 8.
+
+
+Package natbib Warning: Citation `alemohammad2024mad' on page 2 undefined on in
+put line 8.
+
+
+Package natbib Warning: Citation `jablonka2024leveraging' on page 2 undefined o
+n input line 10.
+
+
+Package natbib Warning: Citation `polymerllm2025' on page 2 undefined on input 
+line 10.
+
+
+Package natbib Warning: Citation `vanherck2025finetuned' on page 2 undefined on
+ input line 10.
+
+
+Package natbib Warning: Citation `hatakeyama2023gpt4polymer' on page 2 undefine
+d on input line 10.
+
+
+Package natbib Warning: Citation `anthropic_sonnet5_docs' on page 2 undefined o
+n input line 12.
+
+
+Package natbib Warning: Citation `lamalab_tg_dataset' on page 2 undefined on in
+put line 12.
+
+
+Package natbib Warning: Citation `ross2022molformer' on page 2 undefined on inp
+ut line 12.
+
+
+Package natbib Warning: Citation `breiman2001randomforests' on page 2 undefined
+ on input line 12.
+
+
+Package natbib Warning: Citation `rogers2010ecfp' on page 2 undefined on input 
+line 12.
+
+[2]) (sections/methods.tex
+
+LaTeX Warning: Reference `fig:pipeline' on page 3 undefined on input line 4.
+
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+Overfull \hbox (3.7241pt too wide) in paragraph at lines 43--44
+ [][] 
+
+Package natbib Warning: Citation `lamalab_tg_dataset' on page 3 undefined on in
+put line 51.
+
+
+Package natbib Warning: Citation `weininger1988smiles' on page 3 undefined on i
+nput line 51.
+
+
+Package natbib Warning: Citation `liu2022grea' on page 3 undefined on input lin
+e 51.
+
+
+Package natbib Warning: Citation `otsuka2011polyinfo' on page 3 undefined on in
+put line 51.
+
+
+LaTeX Warning: Reference `sec:results-noise' on page 3 undefined on input line 
+51.
+
+
+Package natbib Warning: Citation `rdkit' on page 3 undefined on input line 53.
+
+
+LaTeX Warning: Reference `sec:cleaning' on page 3 undefined on input line 53.
+
+
+LaTeX Warning: Reference `sec:keys' on page 3 undefined on input line 53.
+
+
+LaTeX Warning: Reference `sec:zero-shot' on page 3 undefined on input line 53.
+
+
+LaTeX Warning: Reference `sec:results-strata' on page 3 undefined on input line
+ 53.
+
+[3]
+
+LaTeX Warning: Reference `sec:results-synthetic' on page 4 undefined on input l
+ine 58.
+
+
+Package natbib Warning: Citation `anthropic_sonnet5_docs' on page 4 undefined o
+n input line 63.
+
+
+Package natbib Warning: Citation `anthropic_sonnet5_docs' on page 4 undefined o
+n input line 63.
+
+
+LaTeX Warning: Reference `sec:results-cost' on page 4 undefined on input line 6
+3.
+
+[4]
+
+LaTeX Warning: Reference `sec:results-synthetic' on page 5 undefined on input l
+ine 65.
+
+
+Package natbib Warning: Citation `ma2020pi1m' on page 5 undefined on input line
+ 67.
+
+
+Package natbib Warning: Citation `pi1m_github' on page 5 undefined on input lin
+e 67.
+
+
+LaTeX Warning: Reference `tab:cleaning' on page 5 undefined on input line 77.
+
+
+LaTeX Warning: Reference `sec:results-synthetic' on page 5 undefined on input l
+ine 77.
+
+[5]
+
+Package natbib Warning: Citation `ross2022molformer' on page 6 undefined on inp
+ut line 82.
+
+
+Package natbib Warning: Citation `molformer_hf' on page 6 undefined on input li
+ne 82.
+
+
+Package natbib Warning: Citation `breiman2001randomforests' on page 6 undefined
+ on input line 84.
+
+
+Package natbib Warning: Citation `pedregosa2011scikit' on page 6 undefined on i
+nput line 84.
+
+
+Package natbib Warning: Citation `rogers2010ecfp' on page 6 undefined on input 
+line 84.
+
+
+Package natbib Warning: Citation `tao2021benchmarking' on page 6 undefined on i
+nput line 84.
+
+[6]
+
+Package natbib Warning: Citation `paszke2019pytorch' on page 7 undefined on inp
+ut line 97.
+
+
+Package natbib Warning: Citation `wolf2020transformers' on page 7 undefined on 
+input line 97.
+
+
+Package natbib Warning: Citation `rdkit' on page 7 undefined on input line 97.
+
+
+Package natbib Warning: Citation `pedregosa2011scikit' on page 7 undefined on i
+nput line 97.
+
+) (sections/results.tex (tables/cleaning_counts.tex)
+
+LaTeX Warning: Reference `tab:cleaning' on page 7 undefined on input line 15.
+
+[7]
+
+LaTeX Warning: Reference `fig:distributions' on page 8 undefined on input line 
+19.
+
+
+LaTeX Warning: Reference `tab:stats' on page 8 undefined on input line 19.
+
+
+Package natbib Warning: Citation `ma2020pi1m' on page 8 undefined on input line
+ 19.
+
+(tables/dataset_stats.tex)
+
+LaTeX Warning: Reference `fig:scatter' on page 8 undefined on input line 39.
+
+[8] (tables/results_main.tex)
+
+LaTeX Warning: Reference `tab:results' on page 9 undefined on input line 52.
+
+
+LaTeX Warning: Reference `fig:learning' on page 9 undefined on input line 52.
+
+
+Package natbib Warning: Citation `uddin2024interpretable' on page 9 undefined o
+n input line 52.
+
+
+LaTeX Warning: Reference `fig:scatter' on page 9 undefined on input line 54.
+
+(tables/paired_differences.tex)
+
+LaTeX Warning: Reference `fig:learning' on page 9 undefined on input line 71.
+
+
+LaTeX Warning: Reference `tab:paired' on page 9 undefined on input line 71.
+
+[9 <./figures/fig_tg_distributions.pdf>] (tables/controls.tex)
+
+LaTeX Warning: Reference `tab:controls' on page 10 undefined on input line 84.
+
+
+LaTeX Warning: Reference `fig:controls' on page 10 undefined on input line 84.
+
+
+LaTeX Warning: Reference `sec:real-data' on page 10 undefined on input line 104
+.
+
+
+LaTeX Warning: Reference `tab:cost' on page 10 undefined on input line 109.
+
+[10] (tables/cost.tex)) (sections/discussion.tex
+
+Package natbib Warning: Citation `hinton2015distilling' on page 11 undefined on
+ input line 8.
+
+
+Package natbib Warning: Citation `hsieh2023distilling' on page 11 undefined on 
+input line 8.
+
+[11 <./figures/fig_learning_curve.pdf>]
+
+Package natbib Warning: Citation `carlini2021extracting' on page 12 undefined o
+n input line 10.
+
+
+Package natbib Warning: Citation `carlini2023quantifying' on page 12 undefined 
+on input line 10.
+
+
+Package natbib Warning: Citation `magar2022contamination' on page 12 undefined 
+on input line 10.
+
+
+Package natbib Warning: Citation `sainz2023contamination' on page 12 undefined 
+on input line 10.
+
+
+Package natbib Warning: Citation `kapoor2023leakage' on page 12 undefined on in
+put line 10.
+
+[12]
+
+Package natbib Warning: Citation `ma2020pi1m' on page 13 undefined on input lin
+e 12.
+
+
+Package natbib Warning: Citation `shumailov2024collapse' on page 13 undefined o
+n input line 13.
+
+
+Package natbib Warning: Citation `alemohammad2024mad' on page 13 undefined on i
+nput line 13.
+
+
+Package natbib Warning: Citation `jablonka2024leveraging' on page 13 undefined 
+on input line 17.
+
+
+Package natbib Warning: Citation `vanherck2025finetuned' on page 13 undefined o
+n input line 17.
+
+
+Package natbib Warning: Citation `wang2021gpt3label' on page 13 undefined on in
+put line 17.
+
+
+Package natbib Warning: Citation `xie2020noisystudent' on page 13 undefined on 
+input line 17.
+
+
+Package natbib Warning: Citation `xu2023transpolymer' on page 13 undefined on i
+nput line 17.
+
+[13 <./figures/fig_controls.pdf>] [14 <./figures/fig_predicted_vs_true.pdf>]
+
+Package natbib Warning: Citation `seedat2024cllm' on page 15 undefined on input
+ line 19.
+
+
+Package natbib Warning: Citation `polymerllm2025' on page 15 undefined on input
+ line 19.
+
+
+LaTeX Warning: Reference `sec:results-strata' on page 15 undefined on input lin
+e 27.
+
+
+LaTeX Warning: Reference `sec:results-noise' on page 15 undefined on input line
+ 27.
+
+
+LaTeX Warning: Reference `sec:keys' on page 15 undefined on input line 27.
+
+
+Package natbib Warning: Citation `kapoor2023leakage' on page 15 undefined on in
+put line 27.
+
+
+Package natbib Warning: Citation `lin2019bigsmiles' on page 15 undefined on inp
+ut line 27.
+
+
+Package natbib Warning: Citation `antoniuk2022periodic' on page 15 undefined on
+ input line 27.
+
+) (sections/conclusions.tex [15]) (sections/declarations.tex
+
+Package natbib Warning: Citation `lamalab_tg_dataset' on page 16 undefined on i
+nput line 4.
+
+
+Package natbib Warning: Citation `pi1m_github' on page 16 undefined on input li
+ne 4.
+
+) [16]
+No file main.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[17] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)<C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/asdfg/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/asdfg/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/asdfg/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/asdfg/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/asdfg/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/asdfg/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/asdfg/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/asdfg/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/asdfg/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/asdfg/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/asdfg/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/asdfg/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/asdfg/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/asdfg/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on main.pdf (17 pages, 757225 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Missing bbl file 'main.bbl' in following:
+ No file main.bbl.
+Latexmk: References changed.
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Create bibtex main
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Category 'other':
+  Rerun of 'bibtex main' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99e (MiKTeX 26.2)
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+  main.bbl
+  main.out
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+)) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+ (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty))
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty)
+ (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/preprint\authblk.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty))) (tables/numbers.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def) (main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-english.trsl) (main.out) (main.out)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
+(sections/abstract.tex) (sections/introduction.tex
+
+Package natbib Warning: Citation `audus2017polymerinformatics' on page 1 undefi
+ned on input line 4.
+
+
+Package natbib Warning: Citation `chen2021polymerinformatics' on page 1 undefin
+ed on input line 4.
+
+
+Package natbib Warning: Citation `ramprasad2017ml' on page 1 undefined on input
+ line 4.
+
+
+Package natbib Warning: Citation `otsuka2011polyinfo' on page 1 undefined on in
+put line 4.
+
+
+Package natbib Warning: Citation `ma2020pi1m' on page 1 undefined on input line
+ 4.
+
+
+Package natbib Warning: Citation `tao2021benchmarking' on page 1 undefined on i
+nput line 4.
+
+
+Package natbib Warning: Citation `uddin2024interpretable' on page 1 undefined o
+n input line 4.
+
+
+Package natbib Warning: Citation `lamalab_tg_dataset' on page 1 undefined on in
+put line 4.
+
+
+Package natbib Warning: Citation `kuenneth2021multitask' on page 1 undefined on
+ input line 4.
+
+
+Package natbib Warning: Citation `kuenneth2023polybert' on page 1 undefined on 
+input line 4.
+
+
+Package natbib Warning: Citation `xu2023transpolymer' on page 1 undefined on in
+put line 4.
+
+
+Package natbib Warning: Citation `gurnani2023polygnn' on page 1 undefined on in
+put line 4.
+
+
+Package natbib Warning: Citation `ma2020pi1m' on page 1 undefined on input line
+ 4.
+
+[1{C:/Users/asdfg/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/as
+dfg/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/asdfg/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/asdfg/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/asdfg/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+
+Package natbib Warning: Citation `hinton2015distilling' on page 2 undefined on 
+input line 8.
+
+
+Package natbib Warning: Citation `west2022symbolic' on page 2 undefined on inpu
+t line 8.
+
+
+Package natbib Warning: Citation `wang2021gpt3label' on page 2 undefined on inp
+ut line 8.
+
+
+Package natbib Warning: Citation `gilardi2023chatgpt' on page 2 undefined on in
+put line 8.
+
+
+Package natbib Warning: Citation `ding2023annotator' on page 2 undefined on inp
+ut line 8.
+
+
+Package natbib Warning: Citation `wang2023selfinstruct' on page 2 undefined on 
+input line 8.
+
+
+Package natbib Warning: Citation `west2022symbolic' on page 2 undefined on inpu
+t line 8.
+
+
+Package natbib Warning: Citation `hsieh2023distilling' on page 2 undefined on i
+nput line 8.
+
+
+Package natbib Warning: Citation `seedat2024cllm' on page 2 undefined on input 
+line 8.
+
+
+Package natbib Warning: Citation `dagdelen2024extraction' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `polak2024extracting' on page 2 undefined on i
+nput line 8.
+
+
+Package natbib Warning: Citation `zheng2023chatgptmof' on page 2 undefined on i
+nput line 8.
+
+
+Package natbib Warning: Citation `jablonka2024leveraging' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `vanherck2025finetuned' on page 2 undefined on
+ input line 8.
+
+
+Package natbib Warning: Citation `polymerllm2025' on page 2 undefined on input 
+line 8.
+
+
+Package natbib Warning: Citation `mirza2025framework' on page 2 undefined on in
+put line 8.
+
+
+Package natbib Warning: Citation `guo2023whatcan' on page 2 undefined on input 
+line 8.
+
+
+Package natbib Warning: Citation `white2023assessment' on page 2 undefined on i
+nput line 8.
+
+
+Package natbib Warning: Citation `castro2023understand' on page 2 undefined on 
+input line 8.
+
+
+Package natbib Warning: Citation `carlini2021extracting' on page 2 undefined on
+ input line 8.
+
+
+Package natbib Warning: Citation `carlini2023quantifying' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `magar2022contamination' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `sainz2023contamination' on page 2 undefined o
+n input line 8.
+
+
+Package natbib Warning: Citation `shumailov2024collapse' on page 2 undefined on
+ input line 8.
+
+
+Package natbib Warning: Citation `alemohammad2024mad' on page 2 undefined on in
+put line 8.
+
+
+Package natbib Warning: Citation `jablonka2024leveraging' on page 2 undefined o
+n input line 10.
+
+
+Package natbib Warning: Citation `polymerllm2025' on page 2 undefined on input 
+line 10.
+
+
+Package natbib Warning: Citation `vanherck2025finetuned' on page 2 undefined on
+ input line 10.
+
+
+Package natbib Warning: Citation `hatakeyama2023gpt4polymer' on page 2 undefine
+d on input line 10.
+
+
+Package natbib Warning: Citation `anthropic_sonnet5_docs' on page 2 undefined o
+n input line 12.
+
+
+Package natbib Warning: Citation `lamalab_tg_dataset' on page 2 undefined on in
+put line 12.
+
+
+Package natbib Warning: Citation `ross2022molformer' on page 2 undefined on inp
+ut line 12.
+
+
+Package natbib Warning: Citation `breiman2001randomforests' on page 2 undefined
+ on input line 12.
+
+
+Package natbib Warning: Citation `rogers2010ecfp' on page 2 undefined on input 
+line 12.
+
+[2]) (sections/methods.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+Overfull \hbox (3.7241pt too wide) in paragraph at lines 43--44
+ [][] 
+
+Package natbib Warning: Citation `lamalab_tg_dataset' on page 3 undefined on in
+put line 51.
+
+
+Package natbib Warning: Citation `weininger1988smiles' on page 3 undefined on i
+nput line 51.
+
+
+Package natbib Warning: Citation `liu2022grea' on page 3 undefined on input lin
+e 51.
+
+
+Package natbib Warning: Citation `otsuka2011polyinfo' on page 3 undefined on in
+put line 51.
+
+
+Package natbib Warning: Citation `rdkit' on page 3 undefined on input line 53.
+
+[3]
+
+Package natbib Warning: Citation `anthropic_sonnet5_docs' on page 4 undefined o
+n input line 63.
+
+
+Package natbib Warning: Citation `anthropic_sonnet5_docs' on page 4 undefined o
+n input line 63.
+
+[4]
+
+Package natbib Warning: Citation `ma2020pi1m' on page 5 undefined on input line
+ 67.
+
+
+Package natbib Warning: Citation `pi1m_github' on page 5 undefined on input lin
+e 67.
+
+[5]
+
+Package natbib Warning: Citation `ross2022molformer' on page 6 undefined on inp
+ut line 82.
+
+
+Package natbib Warning: Citation `molformer_hf' on page 6 undefined on input li
+ne 82.
+
+
+Package natbib Warning: Citation `breiman2001randomforests' on page 6 undefined
+ on input line 84.
+
+
+Package natbib Warning: Citation `pedregosa2011scikit' on page 6 undefined on i
+nput line 84.
+
+
+Package natbib Warning: Citation `rogers2010ecfp' on page 6 undefined on input 
+line 84.
+
+
+Package natbib Warning: Citation `tao2021benchmarking' on page 6 undefined on i
+nput line 84.
+
+[6]
+
+Package natbib Warning: Citation `paszke2019pytorch' on page 7 undefined on inp
+ut line 97.
+
+
+Package natbib Warning: Citation `wolf2020transformers' on page 7 undefined on 
+input line 97.
+
+
+Package natbib Warning: Citation `rdkit' on page 7 undefined on input line 97.
+
+
+Package natbib Warning: Citation `pedregosa2011scikit' on page 7 undefined on i
+nput line 97.
+
+) (sections/results.tex (tables/cleaning_counts.tex) [7]
+
+Package natbib Warning: Citation `ma2020pi1m' on page 8 undefined on input line
+ 19.
+
+(tables/dataset_stats.tex) [8] (tables/results_main.tex)
+
+Package natbib Warning: Citation `uddin2024interpretable' on page 9 undefined o
+n input line 52.
+
+(tables/paired_differences.tex) [9 <./figures/fig_tg_distributions.pdf>]
+(tables/controls.tex) [10] (tables/cost.tex)) (sections/discussion.tex
+
+Package natbib Warning: Citation `hinton2015distilling' on page 11 undefined on
+ input line 8.
+
+
+Package natbib Warning: Citation `hsieh2023distilling' on page 11 undefined on 
+input line 8.
+
+[11 <./figures/fig_learning_curve.pdf>]
+
+Package natbib Warning: Citation `carlini2021extracting' on page 12 undefined o
+n input line 10.
+
+
+Package natbib Warning: Citation `carlini2023quantifying' on page 12 undefined 
+on input line 10.
+
+
+Package natbib Warning: Citation `magar2022contamination' on page 12 undefined 
+on input line 10.
+
+
+Package natbib Warning: Citation `sainz2023contamination' on page 12 undefined 
+on input line 10.
+
+
+Package natbib Warning: Citation `kapoor2023leakage' on page 12 undefined on in
+put line 10.
+
+[12]
+
+Package natbib Warning: Citation `ma2020pi1m' on page 13 undefined on input lin
+e 12.
+
+
+Package natbib Warning: Citation `shumailov2024collapse' on page 13 undefined o
+n input line 13.
+
+
+Package natbib Warning: Citation `alemohammad2024mad' on page 13 undefined on i
+nput line 13.
+
+
+Package natbib Warning: Citation `jablonka2024leveraging' on page 13 undefined 
+on input line 17.
+
+
+Package natbib Warning: Citation `vanherck2025finetuned' on page 13 undefined o
+n input line 17.
+
+
+Package natbib Warning: Citation `wang2021gpt3label' on page 13 undefined on in
+put line 17.
+
+
+Package natbib Warning: Citation `xie2020noisystudent' on page 13 undefined on 
+input line 17.
+
+
+Package natbib Warning: Citation `xu2023transpolymer' on page 13 undefined on i
+nput line 17.
+
+[13 <./figures/fig_controls.pdf>] [14 <./figures/fig_predicted_vs_true.pdf>]
+
+Package natbib Warning: Citation `seedat2024cllm' on page 15 undefined on input
+ line 19.
+
+
+Package natbib Warning: Citation `polymerllm2025' on page 15 undefined on input
+ line 19.
+
+
+Package natbib Warning: Citation `kapoor2023leakage' on page 15 undefined on in
+put line 27.
+
+
+Package natbib Warning: Citation `lin2019bigsmiles' on page 15 undefined on inp
+ut line 27.
+
+
+Package natbib Warning: Citation `antoniuk2022periodic' on page 15 undefined on
+ input line 27.
+
+) (sections/conclusions.tex [15]) (sections/declarations.tex
+
+Package natbib Warning: Citation `lamalab_tg_dataset' on page 16 undefined on i
+nput line 4.
+
+
+Package natbib Warning: Citation `pi1m_github' on page 16 undefined on input li
+ne 4.
+
+) [16] (main.bbl
+Underfull \hbox (badness 1365) in paragraph at lines 63--69
+[]\T1/lmr/m/n/10.95 (+20) Sreekanth Kun-chapu and Kevin Maik Jablonka.  Cu-rate
+d Glass Tran-si-tion Tem-
+
+Underfull \hbox (badness 1983) in paragraph at lines 63--69
+\T1/lmr/m/n/10.95 (+20) per-a-ture for Poly-mers.  Zen-odo, 2025.  Ver-sion of 
+2 July 2025, file extt-t-LA-
+[17] [18] [19] [20])
+
+Package natbib Warning: There were undefined citations.
+
+[21] (main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) )
+(see the transcript file for additional information)<C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/asdfg/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/asdfg/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/asdfg/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/asdfg/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/asdfg/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/asdfg/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/asdfg/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/asdfg/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/asdfg/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/asdfg/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/asdfg/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/asdfg/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/asdfg/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/asdfg/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on main.pdf (21 pages, 808632 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: applying rule 'bibtex main'...
+Rule 'bibtex main':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 2 of rule 'bibtex main'
+------------
+------------
+Running 'bibtex  "main.aux"'
+------------
+This is BibTeX, Version 0.99e (MiKTeX 26.2)
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+Database file #1: references.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  main.aux
+
+------------
+Run number 3 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -recorder  "main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+)) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+ (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty))
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty)
+ (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/preprint\authblk.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty))) (tables/numbers.tex)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def) (main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-english.trsl) (main.out) (main.out)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
+(sections/abstract.tex) (sections/introduction.tex [1{C:/Users/asdfg/AppData/Lo
+cal/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/asdfg/AppData/Local/Programs/M
+iKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/asdfg/AppData/Local/Programs/MiKTe
+X/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/asdfg/AppData/Local/Programs/MiKTe
+X/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/asdfg/AppData/Local/Programs/MiKTeX/fo
+nts/enc/dvips/lm/lm-mathsy.enc}] [2]) (sections/methods.tex
+(C:\Users\asdfg\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd)
+Overfull \hbox (3.7241pt too wide) in paragraph at lines 43--44
+ [][] 
+[3] [4] [5] [6]) (sections/results.tex (tables/cleaning_counts.tex) [7]
+(tables/dataset_stats.tex) [8] (tables/results_main.tex)
+(tables/paired_differences.tex) [9 <./figures/fig_tg_distributions.pdf>]
+(tables/controls.tex) [10] (tables/cost.tex)) (sections/discussion.tex [11 <./f
+igures/fig_learning_curve.pdf>] [12] [13 <./figures/fig_controls.pdf>] [14 <./f
+igures/fig_predicted_vs_true.pdf>]) (sections/conclusions.tex [15])
+(sections/declarations.tex) [16] (main.bbl
+Underfull \hbox (badness 1365) in paragraph at lines 63--69
+[]\T1/lmr/m/n/10.95 (+20) Sreekanth Kun-chapu and Kevin Maik Jablonka.  Cu-rate
+d Glass Tran-si-tion Tem-
+
+Underfull \hbox (badness 1983) in paragraph at lines 63--69
+\T1/lmr/m/n/10.95 (+20) per-a-ture for Poly-mers.  Zen-odo, 2025.  Ver-sion of 
+2 July 2025, file extt-t-LA-
+[17] [18] [19] [20]) [21] (main.aux) )
+(see the transcript file for additional information)<C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/asdfg/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/asdfg/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/asdfg/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/asdfg/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/asdfg/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/asdfg/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/asdfg/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/asdfg/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/asdfg/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/asdfg/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/asdfg/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/asdfg/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/asdfg/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/asdfg/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/asdfg/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on main.pdf (21 pages, 825815 bytes).
+Transcript written on main.log.
+Latexmk: Getting log file 'main.log'
+Latexmk: Examining 'main.fls'
+Latexmk: Examining 'main.log'
+Latexmk: Found input bbl file 'main.bbl'
+Latexmk: Log file says output to 'main.pdf'
+Latexmk: Using bibtex to make bibliography file(s).
+  ===Source file 'main.bbl' for 'pdflatex'
+Latexmk: Found bibliography file(s):
+  ./references.bib
+Latexmk: All targets (main.pdf) are up-to-date
+

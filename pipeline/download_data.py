@@ -1,12 +1,12 @@
 """
 Get the data.
 
-1. The real Tg dataset (Kaggle, PolyInfo-derived) is already in the project folder.
-   Move it into data/raw/ and print its shape and columns.
-2. Download PI1M (about 1 million hypothetical polymer SMILES) from GitHub.
+1. The real Tg dataset: the curated collection of the Jablonka group from Zenodo
+   (record, file name and md5 in config.py; CC-BY 4.0). The md5 is checked after the download.
+2. PI1M (about 1 million hypothetical polymer SMILES) from GitHub.
 """
+import hashlib
 import os
-import shutil
 import urllib.request
 
 import pandas as pd
@@ -16,18 +16,15 @@ import config
 os.makedirs(config.RAW_DIR, exist_ok=True)
 
 # ---------------------------------------------------------------- 1. real Tg dataset
-filename = os.path.basename(config.REAL_TG_CSV)
 if not os.path.exists(config.REAL_TG_CSV):
-    # The file was downloaded by hand into the project root; move it into data/raw/.
-    if os.path.exists(filename):
-        shutil.move(filename, config.REAL_TG_CSV)
-    else:
-        raise SystemExit(f"Cannot find {filename} in the project folder or in {config.RAW_DIR}.")
-
-real = pd.read_csv(config.REAL_TG_CSV)
-print(f"Real Tg dataset: {config.REAL_TG_CSV}")
+    print(f"Downloading {config.REAL_TG_FILE} (about 44 MB) from Zenodo record {config.REAL_TG_ZENODO_RECORD} ...")
+    urllib.request.urlretrieve(config.REAL_TG_URL, config.REAL_TG_CSV)
+md5 = hashlib.md5(open(config.REAL_TG_CSV, "rb").read()).hexdigest()
+if md5 != config.REAL_TG_MD5:
+    raise SystemExit(f"md5 mismatch for {config.REAL_TG_CSV}: {md5}, expected {config.REAL_TG_MD5}")
+real = pd.read_csv(config.REAL_TG_CSV, usecols=list(config.REAL_COLUMNS.values()))
+print(f"Real Tg dataset: {config.REAL_TG_CSV} (doi {config.REAL_TG_DOI}, md5 ok)")
 print(f"  rows: {len(real)}")
-print(f"  columns: {list(real.columns)}")
 print(real.head())
 
 # ---------------------------------------------------------------- 2. PI1M

@@ -1,0 +1,26 @@
+quantity,value
+test polymers with 2+ measurements,54.0
+median experimental SD,5.74
+mean experimental SD,17.27
+"expected |difference| of two measurements, from the median SD (1.128 x SD)",6.48
+"expected |difference| of two measurements, from the mean SD",19.49
+MAE on these polymers: zero-shot teacher,25.95
+"MAE on these polymers: real only, full",20.9
+"MAE on these polymers: real only, n500",34.09
+MAE on these polymers: generated only,29.61
+MAE on these polymers: labeled only,29.82
+"MAE on these polymers: two-stage generated, n500",29.81
+"MAE on these polymers: two-stage labeled, n500",30.85
+"MAE on these polymers: two-stage generated, full",21.57
+"MAE on these polymers: two-stage labeled, full",23.66
+"MAE on these polymers: random forest, real full",21.32
+MAE on the other 1417 test polymers: zero-shot teacher,37.74
+"MAE on the other 1417 test polymers: real only, full",25.4
+"MAE on the other 1417 test polymers: real only, n500",35.93
+MAE on the other 1417 test polymers: generated only,37.11
+MAE on the other 1417 test polymers: labeled only,38.83
+"MAE on the other 1417 test polymers: two-stage generated, n500",33.28
+"MAE on the other 1417 test polymers: two-stage labeled, n500",32.55
+"MAE on the other 1417 test polymers: two-stage generated, full",25.03
+"MAE on the other 1417 test polymers: two-stage labeled, full",24.83
+"MAE on the other 1417 test polymers: random forest, real full",26.73

@@ -1,0 +1,4 @@
+high_sd,n,zero-shot teacher,"real only, full","real only, n500",generated only,labeled only,"two-stage generated, n500","two-stage labeled, n500","two-stage generated, full","two-stage labeled, full","random forest, real full"
+SD > 30 C,7.0,43.0,34.2,56.2,46.8,51.7,43.5,40.4,34.5,37.9,33.9
+other,1464.0,37.3,25.2,35.8,36.8,38.4,33.1,32.5,24.9,24.7,26.5
+all,1471.0,37.3,25.2,35.9,36.8,38.5,33.2,32.5,24.9,24.8,26.5

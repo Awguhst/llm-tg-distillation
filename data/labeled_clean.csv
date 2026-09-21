@@ -2677,7 +2677,6 @@ smiles,tg_celsius
 *CC(CC)CS(=O)(=O)CC(C)(C)C(C)(C)C(*)=O,45.0
 *CC(CC)N(*)C(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,65.0
 *CC(CC)S(=O)(=O)c1ccc(Cc2ccc(C(=O)N*)cc2)cc1,130.0
-*CC(CC)S*,-40.0
 *CC(CC)c1ccc(S(*)(=O)=O)cc1,130.0
 *CC(CC=CCCCCC)COC(=O)c1ccc(C(=O)O*)cc1,-20.0
 *CC(CCC(=O)O)C(=O)NCCCOC(=O)c1ccc(NC(=O)CCCCC(=O)NSCCC(=O)O*)cc1,65.0
@@ -3143,7 +3142,7 @@ smiles,tg_celsius
 *CC/C=C(/*)CCCCOc1ccc(C(=O)Oc2cccc(C)c2)cc1CO,15.0
 *CC/C=C(/*)CCCOC(=O)c1ccccc1CC,-30.0
 *CC/C=C(/*)CCc1ccccc1C,-20.0
-*CC/C=C(/*)COCC(C)=O,-30.0
+*CC/C=C(/*)COCC(C)=O,-25.0
 *CC/C=C(/*)NCCSSCCC,-40.0
 *CC/C=C(/*)c1ccc(C#C)c(C(C)=O)c1,95.0
 *CC/C=C(\C)C(=O)CCCCCCCCCCCCCCCO*,-55.0
@@ -3208,7 +3207,6 @@ smiles,tg_celsius
 *CC1COC(*)C1,-20.0
 *CC1COCCC(CO)COC1*,-20.0
 *CC=C(C)C[Si](*)(C)CCC,-80.0
-*CC=C(C*)COCC(C)=O,-20.0
 *CC=C(CC)CS(=O)(=O)CCCS*,-20.0
 *CC=C(CCCC)CN(*)C(C)C,-20.0
 *CC=CC(*)CCC(=O)NCCCCCC,-45.0
@@ -4666,7 +4664,6 @@ smiles,tg_celsius
 *CCCCCNC(=O)CCCC(=O)NCCCCC(=O)N*,45.0
 *CCCCCNC(=O)CCCCCCCCC(=O)NCCCCCCCCCCNC(=O)C(*)CC,45.0
 *CCCCCNC(=O)CCCCCCCCCCC(=O)NCCCCCSCCCCSCCNC(=O)CCCCCO*,-30.0
-*CCCCCNC(=O)CCCCCCCCCCCCC(=O)NC*,40.0
 *CCCCCNC(=O)CCCCCCCCSCCC(=O)N*,-30.0
 *CCCCCNC(=O)CCCS(=O)(=O)CCCCC(=O)N*,45.0
 *CCCCCNC(=O)CCSCC(=O)N*,-30.0
@@ -6743,7 +6740,6 @@ smiles,tg_celsius
 *Nc1ccc(Cc2ccc(NC(=O)c3ccc(/C=C(\C)c4ccc(C(C)(C)c5ccc(C(*)=O)cc5)cc4)cc3)cc2)cc1,195.0
 *Nc1ccc(Cc2ccc(NC(=O)c3ccc(C(*)=O)cc3)cc2)cc1C(C)c1ccc(Cl)cc1Cl,260.0
 *Nc1ccc(Cc2ccc(NC(=O)c3ccc(C(C)(C)c4ccc(C(*)=O)cc4)cc3)c(F)c2F)cc1,260.0
-*Nc1ccc(Cc2ccc(NC(=O)c3ccc(NC(=O)NCCCCCCNC(*)=O)cc3)cc2)cc1,140.0
 *Nc1ccc(Cc2ccc(NC(=O)c3ccc(Oc4ccc(C(*)=O)cc4)c(C)c3)cc2C)c(O)c1,220.0
 *Nc1ccc(Cc2ccc(NC(=O)c3ccc([SH](=O)(c4ccccc4)c4ccc(*)nc4)cc3)cc2)cc1,220.0
 *Nc1ccc(Cc2ccc(NC(=S)NP(=O)(O)c3ccccc3)cc2)c(*)n1,210.0
@@ -6793,7 +6789,6 @@ smiles,tg_celsius
 *Nc1ccc(NC(=O)c2ccc(C(=O)Nc3ccc(-c4ccc(NC(=O)c5ccc(C(*)=O)cc5)cc4)cc3)cc2)cc1,280.0
 *Nc1ccc(NC(=O)c2ccc(C(=O)Nc3ccc(C(*)=O)cc3)cc2)c(Br)c1,290.0
 *Nc1ccc(NC(=O)c2ccc(C(=O)Oc3cccc(C(*)=O)c3)cc2)cc1,250.0
-*Nc1ccc(NC(=O)c2ccc(C(=O)c3cccc(C(*)=O)c3)cc2)cc1,280.0
 *Nc1ccc(NC(=O)c2ccc(NC(=O)C(CCCCC)C(C)C(=O)Nc3ccc(Cc4ccc(Cc5ccc(C(*)(C(F)(F)F)C(F)(F)F)cc5)cc4)cc3C(F)(F)F)c(C(F)(F)F)c2)cc1,245.0
 *Nc1ccc(NC(=O)c2ccc(NC(=O)CCCC(*)=O)cc2)cc1C,210.0
 *Nc1ccc(NC(=O)c2ccc(NC(=O)CCCCC(=O)Nc3ccc(C(*)=O)cc3)c(C(=O)O)c2)cc1C(=O)OCCCCCCCCCCCCCCCC,90.0
@@ -7474,7 +7469,6 @@ smiles,tg_celsius
 *OCCOC(=O)c1ccc(S(=O)(=O)c2ccc(OC(=O)CCCCCCCCCCCC(*)=O)cc2)cc1,15.0
 *OCCOCC(=O)NCCOCC(*)=O,-30.0
 *OCCOCCCCOC(=O)C[PH](C)(C)c1ccc(Sc2ccc(C(=O)O*)cc2)cc1,-10.0
-*OCCOCCOC(=O)CCCCCCCCC(=O)OCCOC(=O)c1ccc(C(*)=O)cc1,-20.0
 *OCCOCCOC(=O)OC1CCCC(OC(=O)CCCCCCC(=O)OC(=O)c2ccc(O*)cc2)C1,-10.0
 *OCCOCCOC(=O)c1ccc(C(=O)NCCNC(=O)c2cccc(C(=O)O*)c2)cc1,65.0
 *OCCOCCOCCOC(=O)CCCCCCCCC(=O)NCCCCCCNC(=O)CCCCCCCC(=O)O*,-20.0
@@ -8129,7 +8123,6 @@ smiles,tg_celsius
 *Oc1ccc(-c2ccc(OC(=O)c3cc(OCCCCCCCCCC)cc(C(*)=O)c3)cc2)cc1OCCCCCCCC,15.0
 *Oc1ccc(-c2ccc(OC(=O)c3cc(OCCCCCCCCCCCCCCOCCCCCC)c(C(*)=O)c([N+](=O)[O-])c3)cc2-c2ccccc2)cc1OCCCCCCCCCC,45.0
 *Oc1ccc(-c2ccc(OC(=O)c3ccc(*)c(C(=O)O)c3)cc2)cc1[N+](=O)[O-],200.0
-*Oc1ccc(-c2ccc(OC(=O)c3ccc(C(*)=O)cc3)c(-c3ccccc3)c2)cc1,155.0
 *Oc1ccc(-c2ccc(OC(=O)c3ccc(C(*)=O)cc3)c(C(=O)OCCCCCCCCCCCC)c2)cc1C(=O)OCCCCCCCCCCCCCC,10.0
 *Oc1ccc(-c2ccc(OC(=O)c3ccc(C(*)=O)cc3)cc2)cc1[N+]c1ccccc1,180.0
 *Oc1ccc(-c2ccc(OC(=O)c3ccc(C(*)=O)cc3)cc2Br)cc1C(=O)OCCCCCCCCCCCCCCCC,40.0
@@ -9908,7 +9901,6 @@ smiles,tg_celsius
 *c1cccc(Oc2ccc([Si](*)(C)O[Si](C)(C)C)cc2)c1,45.0
 *c1cccc(Oc2cccc(S(=O)(=O)O)c2)c1*,190.0
 *c1cccc(P(=O)(c2ccccc2)c2cccc(-n3c(=O)c4c(F)c5c(=O)n(*)c(=O)c5c(C(F)(F)F)c4c3=O)c2)c1,320.0
-*c1cccc(P(=O)(c2ccccc2)c2cccc(N3C(=O)c4ccc(Oc5ccc6c(c5)C(=O)N(*)C6=O)cc4C3=O)c2)c1,280.0
 *c1cccc(SC[Si](*)(C)C)c1,25.0
 *c1cnc(*)c(Cl)c1Cl,210.0
 *c1cnc(*)n1CCCCCCCCCCC(=O)OC,-30.0

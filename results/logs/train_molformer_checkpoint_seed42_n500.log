@@ -1,0 +1,389 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Device: NVIDIA GeForce RTX 3050 6GB Laptop GPU
+
+=== seed 42 | synthetic_generated | 7912 training rows | start: pretrained checkpoint ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  37%|###6      | 76/207 [00:00<00:00, 757.79it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1256.78it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.1543  validation MAE = 45.05
+    epoch  2  train MSE = 0.1354  validation MAE = 37.03
+    epoch  3  train MSE = 0.0783  validation MAE = 40.44
+    epoch  4  train MSE = 0.0660  validation MAE = 42.54
+    epoch  5  train MSE = 0.0596  validation MAE = 40.76
+    best epoch 2 (validation MAE 37.03) | test MAE = 37.71  R2 = 0.789  (400 s)
+
+=== seed 42 | synthetic_labeled | 9925 training rows | start: pretrained checkpoint ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  43%|####2     | 88/207 [00:00<00:00, 868.91it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1169.82it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.1173  validation MAE = 41.69
+    epoch  2  train MSE = 0.0669  validation MAE = 41.38
+    epoch  3  train MSE = 0.0520  validation MAE = 42.13
+    epoch  4  train MSE = 0.0474  validation MAE = 41.48
+    epoch  5  train MSE = 0.0410  validation MAE = 39.00
+    epoch  6  train MSE = 0.0385  validation MAE = 41.67
+    epoch  7  train MSE = 0.0343  validation MAE = 41.28
+    epoch  8  train MSE = 0.0310  validation MAE = 40.58
+    best epoch 5 (validation MAE 39.00) | test MAE = 39.45  R2 = 0.776  (886 s)
+
+=== seed 42 | real_n500 | 500 training rows | start: pretrained checkpoint ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  42%|####1     | 86/207 [00:00<00:00, 852.48it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1299.58it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.3117  validation MAE = 39.20
+    epoch  2  train MSE = 0.1410  validation MAE = 36.36
+    epoch  3  train MSE = 0.1172  validation MAE = 39.60
+    epoch  4  train MSE = 0.1075  validation MAE = 38.36
+    epoch  5  train MSE = 0.0825  validation MAE = 35.78
+    epoch  6  train MSE = 0.0607  validation MAE = 33.58
+    epoch  7  train MSE = 0.0511  validation MAE = 34.85
+    epoch  8  train MSE = 0.0501  validation MAE = 36.91
+    epoch  9  train MSE = 0.0462  validation MAE = 36.42
+    best epoch 6 (validation MAE 33.58) | test MAE = 35.46  R2 = 0.808  (126 s)
+
+=== seed 42 | twostage_generated_n500 | 500 training rows | start: synthetic_generated ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  39%|###8      | 80/207 [00:00<00:00, 773.63it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1389.00it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.1730  validation MAE = 32.41
+    epoch  2  train MSE = 0.1019  validation MAE = 32.10
+    epoch  3  train MSE = 0.0889  validation MAE = 35.52
+    epoch  4  train MSE = 0.0764  validation MAE = 35.83
+    epoch  5  train MSE = 0.0616  validation MAE = 33.27
+    best epoch 2 (validation MAE 32.10) | test MAE = 34.31  R2 = 0.822  (55 s)
+
+=== seed 42 | twostage_labeled_n500 | 500 training rows | start: synthetic_labeled ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  38%|###7      | 78/207 [00:00<00:00, 755.73it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1398.31it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.1666  validation MAE = 33.68
+    epoch  2  train MSE = 0.1084  validation MAE = 30.56
+    epoch  3  train MSE = 0.0885  validation MAE = 32.17
+    epoch  4  train MSE = 0.0682  validation MAE = 33.57
+    epoch  5  train MSE = 0.0585  validation MAE = 34.35
+    best epoch 2 (validation MAE 30.56) | test MAE = 32.78  R2 = 0.833  (55 s)
+
+=== seed 42 | concat_generated_n500 | 8365 training rows | start: pretrained checkpoint ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  51%|#####1    | 106/207 [00:00<00:00, 1026.10it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1388.54it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.1476  validation MAE = 37.45
+    epoch  2  train MSE = 0.0947  validation MAE = 33.58
+    epoch  3  train MSE = 0.0822  validation MAE = 33.77
+    epoch  4  train MSE = 0.0684  validation MAE = 32.64
+    epoch  5  train MSE = 0.0617  validation MAE = 30.78
+    epoch  6  train MSE = 0.0548  validation MAE = 31.68
+    epoch  7  train MSE = 0.0496  validation MAE = 33.24
+    epoch  8  train MSE = 0.0457  validation MAE = 30.70
+    epoch  9  train MSE = 0.0405  validation MAE = 34.81
+    epoch 10  train MSE = 0.0378  validation MAE = 31.12
+    epoch 11  train MSE = 0.0359  validation MAE = 31.88
+    best epoch 8 (validation MAE 30.70) | test MAE = 32.59  R2 = 0.834  (974 s)
+
+=== seed 42 | concat_labeled_n500 | 10423 training rows | start: pretrained checkpoint ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  48%|####7     | 99/207 [00:00<00:00, 989.27it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1286.60it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.1146  validation MAE = 36.52
+    epoch  2  train MSE = 0.0721  validation MAE = 40.06
+    epoch  3  train MSE = 0.0632  validation MAE = 34.33
+    epoch  4  train MSE = 0.0546  validation MAE = 33.66
+    epoch  5  train MSE = 0.0466  validation MAE = 32.97
+    epoch  6  train MSE = 0.0422  validation MAE = 35.77
+    epoch  7  train MSE = 0.0396  validation MAE = 31.42
+    epoch  8  train MSE = 0.0368  validation MAE = 33.05
+    epoch  9  train MSE = 0.0336  validation MAE = 35.76
+    epoch 10  train MSE = 0.0290  validation MAE = 36.70
+    best epoch 7 (validation MAE 31.42) | test MAE = 32.45  R2 = 0.831  (1194 s)
+
+=== seed 42 | synthetic_selftrain | 9925 training rows | start: pretrained checkpoint ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  60%|#####9    | 124/207 [00:00<00:00, 1227.39it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1527.71it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.0521  validation MAE = 35.96
+    epoch  2  train MSE = 0.0245  validation MAE = 36.25
+    epoch  3  train MSE = 0.0215  validation MAE = 35.14
+    epoch  4  train MSE = 0.0197  validation MAE = 35.56
+    epoch  5  train MSE = 0.0180  validation MAE = 34.84
+    epoch  6  train MSE = 0.0158  validation MAE = 34.76
+    epoch  7  train MSE = 0.0152  validation MAE = 35.28
+    epoch  8  train MSE = 0.0132  validation MAE = 34.33
+    epoch  9  train MSE = 0.0123  validation MAE = 35.10
+    epoch 10  train MSE = 0.0125  validation MAE = 33.81
+    best epoch 10 (validation MAE 33.81) | test MAE = 35.44  R2 = 0.811  (1106 s)
+
+=== seed 42 | twostage_selftrain_n500 | 500 training rows | start: synthetic_selftrain ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  43%|####2     | 89/207 [00:00<00:00, 876.74it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1118.23it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.0892  validation MAE = 33.54
+    epoch  2  train MSE = 0.0611  validation MAE = 33.39
+    epoch  3  train MSE = 0.0564  validation MAE = 33.26
+    epoch  4  train MSE = 0.0419  validation MAE = 35.66
+    epoch  5  train MSE = 0.0338  validation MAE = 35.29
+    epoch  6  train MSE = 0.0258  validation MAE = 33.68
+    best epoch 3 (validation MAE 33.26) | test MAE = 35.07  R2 = 0.802  (64 s)
+
+=== seed 42 | synthetic_shuffled_generated | 7912 training rows | start: pretrained checkpoint ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  45%|####4     | 93/207 [00:00<00:00, 929.63it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1523.85it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 1.0524  validation MAE = 111.19
+    epoch  2  train MSE = 1.0134  validation MAE = 105.18
+    epoch  3  train MSE = 0.9961  validation MAE = 106.20
+    epoch  4  train MSE = 1.0337  validation MAE = 111.46
+    epoch  5  train MSE = 1.0201  validation MAE = 101.91
+    epoch  6  train MSE = 1.0180  validation MAE = 102.98
+    epoch  7  train MSE = 1.0095  validation MAE = 103.85
+    epoch  8  train MSE = 1.0146  validation MAE = 104.91
+    best epoch 5 (validation MAE 101.91) | test MAE = 98.88  R2 = -0.229  (622 s)
+
+=== seed 42 | twostage_shuffled_generated_n500 | 500 training rows | start: synthetic_shuffled_generated ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  46%|####5     | 95/207 [00:00<00:00, 949.55it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1321.32it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 1.0184  validation MAE = 92.49
+    epoch  2  train MSE = 1.0100  validation MAE = 81.09
+    epoch  3  train MSE = 0.6150  validation MAE = 72.84
+    epoch  4  train MSE = 0.5594  validation MAE = 59.10
+    epoch  5  train MSE = 0.4495  validation MAE = 56.45
+    epoch  6  train MSE = 0.4432  validation MAE = 60.33
+    epoch  7  train MSE = 0.5144  validation MAE = 63.95
+    epoch  8  train MSE = 0.5158  validation MAE = 71.42
+    best epoch 5 (validation MAE 56.45) | test MAE = 60.04  R2 = 0.515  (84 s)
+
+=== seed 42 | synthetic_shuffled_labeled | 9925 training rows | start: pretrained checkpoint ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  35%|###4      | 72/207 [00:00<00:00, 718.52it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1292.91it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 1.0589  validation MAE = 103.74
+    epoch  2  train MSE = 1.0244  validation MAE = 101.85
+    epoch  3  train MSE = 1.0189  validation MAE = 115.30
+    epoch  4  train MSE = 1.0274  validation MAE = 108.35
+    epoch  5  train MSE = 1.0196  validation MAE = 124.51
+    best epoch 2 (validation MAE 101.85) | test MAE = 99.11  R2 = -0.270  (557 s)
+
+=== seed 42 | twostage_shuffled_labeled_n500 | 500 training rows | start: synthetic_shuffled_labeled ===
+Loading weights:   0%|          | 0/207 [00:00<?, ?it/s]Loading weights:  46%|####5     | 95/207 [00:00<00:00, 941.66it/s]Loading weights: 100%|##########| 207/207 [00:00<00:00, 1385.19it/s]
+[transformers] [1mMolformerForSequenceClassification LOAD REPORT[0m from: ibm/MoLFormer-XL-both-10pct
+Key                                | Status     | 
+-----------------------------------+------------+-
+lm_head.transform.dense.weight     | UNEXPECTED | 
+lm_head.transform.LayerNorm.bias   | UNEXPECTED | 
+lm_head.transform.dense.bias       | UNEXPECTED | 
+lm_head.decoder.weight             | UNEXPECTED | 
+lm_head.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.out_proj.bias           | MISSING    | 
+classifier.dense2.bias             | MISSING    | 
+classifier.dense.bias              | MISSING    | 
+classifier.dense2.weight           | MISSING    | 
+classifier.dense.weight            | MISSING    | 
+classifier.out_proj.weight         | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+    epoch  1  train MSE = 0.5537  validation MAE = 50.47
+    epoch  2  train MSE = 0.2956  validation MAE = 43.75
+    epoch  3  train MSE = 0.2402  validation MAE = 43.08
+    epoch  4  train MSE = 0.2225  validation MAE = 48.43
+    epoch  5  train MSE = 0.2185  validation MAE = 47.07
+    epoch  6  train MSE = 0.2295  validation MAE = 42.14
+    epoch  7  train MSE = 0.2198  validation MAE = 43.96
+    epoch  8  train MSE = 0.2460  validation MAE = 44.79
+    epoch  9  train MSE = 0.2089  validation MAE = 42.72
+    best epoch 6 (validation MAE 42.14) | test MAE = 44.05  R2 = 0.710  (94 s)
+
+All requested runs are complete.

@@ -107,7 +107,7 @@ def make_record(custom_id, message, batch_id, extra_fields):
 
 
 def total_cost_so_far():
-    """Sum the cost of every saved response across all three response files."""
+    """Sum the cost of every saved response across the three response files."""
     total = 0.0
     for path in [config.GENERATED_RESPONSES, config.LABELED_RESPONSES, config.ZERO_SHOT_RESPONSES]:
         for record in load_all_records(path):

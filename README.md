@@ -1,100 +1,101 @@
-# Can cheap LLM data replace or supplement real Tg data?
+# Language-model-derived training data for polymer glass transition prediction
 
-A small pipeline that compares three training sets for polymer glass transition
-temperature (Tg) prediction:
+Code, data and per-run outputs for the paper.
 
-- **real**: experimental PolyInfo data (Kaggle `fridaycode/tg-smiles-pid-polyinfo-class`)
-- **generated**: polymers *and* Tg values written by Claude Sonnet 5
-- **labeled**: hypothetical PI1M polymers with Tg values *predicted* by Claude Sonnet 5
+[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
+[![Data](https://img.shields.io/badge/data-10.5281%2Fzenodo.15789599-blue.svg)](https://doi.org/10.5281/zenodo.15789599)
 
-All models are evaluated on the same held-out 20 % of the real data.
+Can data written by a large language model replace or supplement experimental measurements for
+predicting the glass transition temperature (Tg) of polymers? We ask Claude Sonnet 5 for two kinds of
+synthetic data — a **generated** set, where it invents both the repeat unit and the Tg, and a
+**labeled** set, where it assigns a Tg to hypothetical [PI1M](https://github.com/RUIMINMA1996/PI1M)
+structures — and benchmark both against real measurements on a common held-out test set.
 
-## Layout
+**Answer: supplement, not substitute, and only when measurements are scarce.**
+
+| MoLFormer trained on | Test MAE (°C) |
+|---|---|
+| 5,297 real polymers | **25.2** ± 1.2 |
+| generated set alone (7,912) | 36.8 ± 0.6 |
+| labeled set alone (9,925) | 38.5 ± 0.7 |
+| *Claude Sonnet 5, zero-shot* | *37.3* |
+| 250 real only | 39.1 ± 1.4 |
+| 250 real, after a synthetic first stage | 34.3 ± 0.7 |
+
+A synthetic first stage is worth 3–5 °C at 250–500 real polymers, ~2 °C at 1,000, and nothing at
+5,297. Shuffling the teacher's Tg values destroys the gain, so it comes from its Tg knowledge and not
+from seeing more structures. 8.3 % of the "generated" polymers turn out to be memorised copies of real
+database entries. The two datasets cost USD 11.26 to produce.
+
+![Learning curve](results/figures/learning_curve.png)
+
+Plain-language walkthrough of every result: [`results/SUMMARY.md`](results/SUMMARY.md).
+
+## Reproduce
+
+```bash
+pip install -r requirements.txt          # pinned to the versions used for the paper
+cp .env.example .env                     # only needed to re-query the API; add ANTHROPIC_API_KEY
+
+python pipeline/download_data.py         # Zenodo (md5-checked) + PI1M
+python pipeline/prepare_real_data.py     # clean, dedupe, split 5,297 / 589 / 1,471
+python pipeline/clean_synthetic_data.py  # six rules; test+validation polymers removed
+python pipeline/train_molformer.py       # 120 runs, 5 seeds, resumable
+python pipeline/train_random_forest.py
+python pipeline/analyze_results.py       # every table in results/tables/
+python pipeline/make_figures.py
+```
+
+Run everything from the repository root. The API scripts (`generate_with_claude.py`,
+`label_pi1m_with_claude.py`, `zero_shot_with_claude.py`) are **not** needed to reproduce the results:
+every raw response is already in `data/claude_responses/`, and a request whose id has a saved response
+is never re-sent. All settings live in `pipeline/config.py`.
+
+160 training runs, plus a 30-run early-stopping ablation (`pipeline/patience_ablation.py`):
+about 29 GPU-hours on one RTX 3050 laptop GPU.
+
+## What is here
 
 ```
-pipeline/
-    config.py                every setting: paths, model name, data seed (42), training seeds
-                             (42-46), sample sizes, budget cap, PILOT flag, hyperparameters
-    common/
-        claude_batches.py    talk to the Message Batches API, save raw responses, track cost
-        prompts.py           the two prompts and the parsing of Claude's JSON answers
-        cleaning.py          SMILES canonicalization and the cleaning rules
-        run_info.py          append entries to results/run_info.json
-    download_data.py         ┐
-    prepare_real_data.py     │
-    generate_with_claude.py  │
-    label_pi1m_with_claude.py│  the pipeline, run in this order
-    zero_shot_with_claude.py │
-    clean_synthetic_data.py  │
-    train_and_evaluate.py    │
-    make_figures.py          ┘
-data/raw/                    the original downloaded files
-data/claude_responses/       every raw Claude response (JSONL, one line per request)
-data/*.csv                   intermediate tables, one per step
-results/                     results.csv (one row per experiment, model and seed),
-                             results_summary.csv (mean and SD over seeds), predictions/
-                             (one file per run), train_times.csv, figures/, run_info.json
+pipeline/        the whole study, one script per step; config.py holds every setting
+  common/        Claude batch API, the two prompts, SMILES cleaning and the polymer keys
+data/            the two synthetic sets, the cleaned real data and the three splits
+  claude_responses/   every raw LLM response, one JSON line per request
+results/         predictions/ and runs/ (one CSV + one JSON per training run), tables/,
+                 figures/, patience_ablation.jsonl, run_info.json, SUMMARY.md
 ```
 
-## Setup
+Two details that matter for anyone reusing this:
 
+- **Polymer identity.** The same chain can be cut into different repeat units (`*CCO*` = `*COC*`), so
+  two polymers count as identical if they match on *either* the canonical SMILES *or* a cut-invariant
+  ring-closure key ([`pipeline/common/cleaning.py`](pipeline/common/cleaning.py)). Exact matching alone
+  would have missed a third of the test polymers that the LLM reproduced verbatim.
+- **Reproducibility.** MoLFormer's linear attention redraws random features on every forward pass
+  (`deterministic_eval = False`, left as shipped), so results reproduce statistically, not bit for bit.
+  `results/run_info.json` records the dataset checksum, prompts, request counts, costs and software
+  versions.
+
+## Data
+
+Real Tg data: the curated collection of Kunchapu and Jablonka,
+[10.5281/zenodo.15789599](https://doi.org/10.5281/zenodo.15789599), CC BY 4.0.
+PI1M: [RUIMINMA1996/PI1M](https://github.com/RUIMINMA1996/PI1M).
+Both are downloaded by `pipeline/download_data.py` and are not redistributed here.
+
+## Citation
+
+```bibtex
+@article{rusev2026llmtg,
+  title   = {Language-model-derived training data for polymer glass transition
+             prediction: a controlled benchmark},
+  author  = {Rusev, Rostislav},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}
 ```
-pip install -r requirements.txt
-copy .env.example .env       # then paste your key into .env
-```
 
-`.env` contains one line, `ANTHROPIC_API_KEY=sk-ant-...`. The Claude scripts load it
-with python-dotenv; a key already set in the environment takes precedence. `.env` is in
-`.gitignore` and the key never appears in code.
+## License
 
-## The pipeline, in order
-
-Run every script from the project folder (the one that contains this README), for example
-`python pipeline/prepare_real_data.py`. The scripts use the relative paths `data/` and
-`results/`, and look for `.env` in the project folder.
-
-| Script | What it does | Reads | Writes |
-|---|---|---|---|
-| `download_data.py` | moves the Kaggle CSV into `data/raw/`, downloads PI1M from GitHub | | `data/raw/*.csv` |
-| `prepare_real_data.py` | canonicalizes SMILES, merges duplicates (median Tg), random 80/20 split | `data/raw/` | `data/train_real.csv`, `data/test_real.csv` |
-| `generate_with_claude.py` | asks Claude for ~50 polymer/Tg pairs per request, in rounds, until 10,000 clean pairs or 400 requests | `test_real.csv` | `data/claude_responses/generated.jsonl`, `data/generated_raw.csv` |
-| `label_pi1m_with_claude.py` | samples 10,000 PI1M polymers and asks Claude for a Tg, one per request | `PI1M.csv` | `data/pi1m_sample.csv`, `data/claude_responses/labeled.jsonl`, `data/labeled_raw.csv` |
-| `zero_shot_with_claude.py` | same prompt on the real test set (zero-shot baseline) | `test_real.csv` | `data/claude_responses/zero_shot.jsonl`, `results/zero_shot_predictions.csv` |
-| `clean_synthetic_data.py` | six cleaning steps with per-step counts (numeric Tg, RDKit-valid, exactly two `*`, Tg range, duplicates, test-set overlap), keeps at most 10,000 generated pairs | `data/*_raw.csv` | `data/generated_clean.csv`, `data/labeled_clean.csv` |
-| `train_and_evaluate.py` | 8 experiments x (random forest + MolFormer) x 5 training seeds, plus the zero-shot row; a finished run is never repeated, so the script can be interrupted and restarted | `data/*_clean.csv`, `train/test_real.csv` | `results/results.csv`, `results/results_summary.csv`, `results/predictions/`, `results/train_times.csv` |
-| `make_figures.py` | MAE bar chart, predicted-vs-true scatter plots, Tg histograms | `results/` | `results/figures/*.png` |
-
-Every script can be rerun on its own; each one only reads the CSVs of the previous step.
-
-## Budget safety
-
-- `PILOT = True` in `pipeline/config.py` sends only a handful of requests (2 generation requests,
-  100 labeling requests, 100 zero-shot requests). The released `config.py` has
-  `PILOT = False`, the full run of the paper; set it to `True` first when you try the
-  scripts with a new key.
-- Every Claude script prints the number of requests and an estimated cost, then waits
-  for you to type `yes`. Passing `--yes` on the command line skips the prompt.
-- `BUDGET_LIMIT_USD` in `config.py` is a hard stop: a batch is refused if it would push
-  the total spend above it.
-- `USE_BATCH_API = True` sends everything through the Message Batches API (50 % cheaper,
-  but a batch can sit in Anthropic's queue for hours). `False` sends requests one by one
-  at full price; useful for a quick pilot, too expensive for the full run.
-- Every raw response is stored in `data/claude_responses/*.jsonl`. A request whose id
-  already has a saved response is never sent again, and a batch that was submitted but
-  not yet collected is resumed from `*.jsonl.pending` on the next run, so a crash never
-  costs twice.
-- Spend so far is the sum of `cost_usd` over the saved responses; every script prints it.
-
-## Notes on the Claude API settings
-
-- Model: `claude-sonnet-5`, extended thinking disabled explicitly.
-- Sonnet 5 rejects `temperature` / `top_p` / `top_k`, so no sampling parameters are set.
-  Diversity in the generated dataset comes from rotating polymer classes, focus hints,
-  and a variant sentence in the prompt (see `pipeline/common/prompts.py` and `pipeline/config.py`).
-- The two scripts that label polymers use the same short prompt from `pipeline/common/prompts.py`.
-
-## Reproducibility
-
-`results/run_info.json` collects the model name, prompts, thinking setting, dates,
-request counts, dataset sizes after every cleaning step, training settings, and the total
-API cost. Every script appends its own entries.
+TODO — choose a license before release (MIT or Apache-2.0 for the code; note that the real Tg data
+remain CC BY 4.0 under their original terms).

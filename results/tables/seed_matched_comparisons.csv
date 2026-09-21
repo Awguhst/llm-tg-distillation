@@ -1,0 +1,28 @@
+comparison (first minus second),seeds,dMAE mean,SD,min,max,same sign,paired t p,Wilcoxon p
+"two-stage generated vs real only, n250",5,-4.49,1.47,-6.9,-2.93,5/5,0.0024,0.0625
+"two-stage labeled vs real only, n250",5,-4.75,1.61,-7.52,-3.59,5/5,0.0027,0.0625
+"two-stage generated vs real only, n500",5,-2.72,1.39,-4.47,-1.15,5/5,0.012,0.0625
+"two-stage labeled vs real only, n500",5,-3.37,1.6,-6.06,-2.21,5/5,0.0091,0.0625
+"two-stage generated vs real only, n1000",5,-1.83,2.9,-6.68,0.32,4/5,0.2306,0.1875
+"two-stage labeled vs real only, n1000",5,-2.12,2.14,-5.76,-0.36,5/5,0.0905,0.0625
+"two-stage generated vs real only, nfull",5,-0.33,0.32,-0.6,0.21,4/5,0.0851,0.125
+"two-stage labeled vs real only, nfull",5,-0.44,1.95,-2.91,2.53,4/5,0.6387,0.4375
+"two-stage vs concatenation, generated, n500",5,0.14,1.48,-2.31,1.73,4/5,0.8463,0.625
+"concatenation generated vs real only, n500",5,-2.85,2.03,-4.8,0.42,4/5,0.0346,0.125
+"two-stage vs concatenation, labeled, n500",5,-0.33,0.53,-1.08,0.33,4/5,0.2344,0.3125
+"concatenation labeled vs real only, n500",5,-3.05,1.18,-4.98,-2.08,5/5,0.0044,0.0625
+"two-stage vs concatenation, generated, nfull",5,0.8,1.27,-1.21,2.03,4/5,0.2306,0.3125
+"concatenation generated vs real only, nfull",5,-1.13,1.33,-2.56,0.91,4/5,0.1311,0.1875
+"two-stage vs concatenation, labeled, nfull",5,-1.3,2.77,-3.75,3.4,4/5,0.3544,0.4375
+"concatenation labeled vs real only, nfull",5,0.85,1.17,-0.87,2.41,4/5,0.1771,0.3125
+"self-training vs LLM-labeled (two-stage, n500)",5,2.02,0.73,1.24,2.91,5/5,0.0034,0.0625
+"self-training vs real only, n500",5,-1.36,1.34,-3.7,-0.39,5/5,0.0859,0.0625
+"shuffled vs unshuffled generated (two-stage, n500)",5,21.34,16.77,8.63,48.82,5/5,0.0466,0.0625
+"shuffled vs unshuffled labeled (two-stage, n500)",5,7.01,6.16,1.6,15.65,5/5,0.0637,0.0625
+"shuffled generated vs real only, n500",5,18.62,16.43,6.42,44.96,5/5,0.0644,0.0625
+"shuffled labeled vs real only, n500",5,3.63,7.01,-2.0,13.44,3/5,0.3111,0.625
+labeled only vs generated only (stage 1),5,1.66,0.67,1.04,2.75,5/5,0.0051,0.0625
+"random forest: real + generated vs real only, n500",5,-0.47,0.75,-1.66,0.19,4/5,0.2365,0.3125
+"random forest: real + labeled vs real only, n500",5,-0.09,0.5,-0.75,0.42,3/5,0.7054,0.625
+"random forest: real + generated vs real only, nfull",5,0.78,0.12,0.62,0.94,5/5,0.0001,0.0625
+"random forest: real + labeled vs real only, nfull",5,1.06,0.08,0.93,1.15,5/5,0.0,0.0625
