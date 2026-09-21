@@ -2,7 +2,7 @@
 
 Code, data and per-run outputs for the paper.
 
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
+[![ChemRxiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://chemrxiv.org/abs/XXXX.XXXXX)
 [![Data](https://img.shields.io/badge/data-10.5281%2Fzenodo.15789599-blue.svg)](https://doi.org/10.5281/zenodo.15789599)
 
 Can data written by a large language model replace or supplement experimental measurements for
