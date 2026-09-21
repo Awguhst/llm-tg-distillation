@@ -6,9 +6,9 @@ Code, data and per-run outputs for the paper.
 
 Can data written by a large language model replace or supplement experimental measurements for
 predicting the glass transition temperature (Tg) of polymers? We ask Claude Sonnet 5 for two kinds of
-synthetic data — a **generated** set, where it invents both the repeat unit and the Tg, and a
+synthetic data - a **generated** set, where it invents both the repeat unit and the Tg, and a
 **labeled** set, where it assigns a Tg to hypothetical [PI1M](https://github.com/RUIMINMA1996/PI1M)
-structures — and benchmark both against real measurements on a common held-out test set.
+structures - and benchmark both against real measurements on a common held-out test set.
 
 **Answer: supplement, not substitute, and only when measurements are scarce.**
 
@@ -97,5 +97,5 @@ Both are downloaded by `pipeline/download_data.py` and are not redistributed her
 
 ## License
 
-TODO — choose a license before release (MIT or Apache-2.0 for the code; note that the real Tg data
+TODO - choose a license before release (MIT or Apache-2.0 for the code; note that the real Tg data
 remain CC BY 4.0 under their original terms).
