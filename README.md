@@ -2,8 +2,7 @@
 
 Code, data and per-run outputs for the paper.
 
-[![ChemRxiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://chemrxiv.org/abs/XXXX.XXXXX)
-[![Data](https://img.shields.io/badge/data-10.5281%2Fzenodo.15789599-blue.svg)](https://doi.org/10.5281/zenodo.15789599)
+[![ChemRxiv](https://img.shields.io/badge/ChemRxiv-10.26434%2Fchemrxiv--2026--XXXXX-orange.svg)](https://doi.org/10.26434/chemrxiv-2026-XXXXX)
 
 Can data written by a large language model replace or supplement experimental measurements for
 predicting the glass transition temperature (Tg) of polymers? We ask Claude Sonnet 5 for two kinds of
@@ -90,8 +89,9 @@ Both are downloaded by `pipeline/download_data.py` and are not redistributed her
   title   = {Language-model-derived training data for polymer glass transition
              prediction: a controlled benchmark},
   author  = {Rusev, Rostislav},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2026}
+  journal = {ChemRxiv},
+  year    = {2026},
+  doi     = {10.26434/chemrxiv-2026-XXXXX}
 }
 ```
 
