@@ -54,3 +54,43 @@ is never re-sent. All settings live in `pipeline/config.py`.
 about 29 GPU-hours on one RTX 3050 laptop GPU.
 
 ## What is here
+
+```
+pipeline/        the whole study, one script per step; config.py holds every setting
+  common/        Claude batch API, the two prompts, SMILES cleaning and the polymer keys
+data/            the two synthetic sets, the cleaned real data and the three splits
+  claude_responses/   every raw LLM response, one JSON line per request
+results/         predictions/ and runs/ (one CSV + one JSON per training run), tables/,
+                 figures/, patience_ablation.jsonl, run_info.json, SUMMARY.md
+```
+
+Two details that matter for anyone reusing this:
+
+- **Polymer identity.** The same chain can be cut into different repeat units (`*CCO*` = `*COC*`), so
+  two polymers count as identical if they match on *either* the canonical SMILES *or* a cut-invariant
+  ring-closure key ([`pipeline/common/cleaning.py`](pipeline/common/cleaning.py)). Exact matching alone
+  would have missed a third of the test polymers that the LLM reproduced verbatim.
+- **Reproducibility.** MoLFormer's linear attention redraws random features on every forward pass
+  (`deterministic_eval = False`, left as shipped), so results reproduce statistically, not bit for bit.
+  `results/run_info.json` records the dataset checksum, prompts, request counts, costs and software
+  versions.
+
+## Data
+
+Real Tg data: the curated collection of Kunchapu and Jablonka,
+[10.5281/zenodo.15789599](https://doi.org/10.5281/zenodo.15789599), CC BY 4.0.
+PI1M: [RUIMINMA1996/PI1M](https://github.com/RUIMINMA1996/PI1M).
+Both are downloaded by `pipeline/download_data.py` and are not redistributed here.
+
+## Citation
+
+```bibtex
+@article{rusev2026llmtg,
+  title   = {Language-model-derived training data for polymer glass transition
+             prediction: a controlled benchmark},
+  author  = {Rusev, Rostislav},
+  journal = {ChemRxiv},
+  year    = {2026},
+  doi     = {10.26434/chemrxiv.15009353/v1}
+}
+```
