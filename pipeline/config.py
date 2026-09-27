@@ -6,19 +6,22 @@ Every script imports it. Change things here, not in the scripts.
 import os
 
 # ---------------------------------------------------------------- folders
-# This file lives in <project>/pipeline/, so the project folder is one level up.
+# This file lives in <project>/pipeline/, so the project folder is one level up. Every path
+# below is anchored to it, so the scripts can be run from any working directory.
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENV_FILE = os.path.join(PROJECT_DIR, ".env")   # holds ANTHROPIC_API_KEY=..., see .env.example
-# data/ and results/ are relative paths: run every script from the project folder,
-# for example  python pipeline/prepare_real_data.py
-DATA_DIR = "data"
+DATA_DIR = os.path.join(PROJECT_DIR, "data")
 RAW_DIR = os.path.join(DATA_DIR, "raw")          # original downloaded files
 CLAUDE_RESPONSES_DIR = os.path.join(DATA_DIR, "claude_responses")  # every raw Claude response, never deleted
-RESULTS_DIR = "results"
-FIGURES_DIR = os.path.join(RESULTS_DIR, "figures")
+RESULTS_DIR = os.path.join(PROJECT_DIR, "results")
+FIGURES_DIR = os.path.join(RESULTS_DIR, "figures")           # the figures of the paper and the SI (PDF + PNG)
+TABLES_DIR = os.path.join(RESULTS_DIR, "tables")             # every analysis table as CSV (analyze_results.py)
+LATEX_TABLES_DIR = os.path.join(TABLES_DIR, "latex")         # the LaTeX tables and number macros of the paper (make_tables.py)
 PREDICTIONS_DIR = os.path.join(RESULTS_DIR, "predictions")   # per-polymer test predictions, one CSV per run
 RUNS_DIR = os.path.join(RESULTS_DIR, "runs")                 # one small JSON per run: config, best epoch, metrics
 WEIGHTS_DIR = os.path.join(RESULTS_DIR, "stage1_weights")    # best stage-1 weights, reused by every stage-2 run (not for git)
+PSEUDO_LABELS_DIR = os.path.join(RESULTS_DIR, "pseudo_labels")   # self-training labels, one CSV per seed
+PATIENCE_ABLATION_JSONL = os.path.join(RESULTS_DIR, "patience_ablation.jsonl")
 
 # ---------------------------------------------------------------- input files
 # Real Tg data: curated collection of the Jablonka group on Zenodo, CC-BY 4.0.
@@ -58,7 +61,12 @@ LABELED_RAW_CSV = os.path.join(DATA_DIR, "labeled_raw.csv")       # parsed pairs
 GENERATED_CLEAN_CSV = os.path.join(DATA_DIR, "generated_clean.csv")
 LABELED_CLEAN_CSV = os.path.join(DATA_DIR, "labeled_clean.csv")
 ZERO_SHOT_CSV = os.path.join(RESULTS_DIR, "zero_shot_predictions.csv")
+ZERO_SHOT_METRICS_JSON = os.path.join(RESULTS_DIR, "zero_shot_metrics.json")
+API_COST_CSV = os.path.join(RESULTS_DIR, "api_cost.csv")
+TEST_SIMILARITY_CSV = os.path.join(RESULTS_DIR, "test_similarity.csv")
+MEMORIZATION_CSV = os.path.join(RESULTS_DIR, "memorization.csv")
 RESULTS_CSV = os.path.join(RESULTS_DIR, "results.csv")
+RESULTS_SUMMARY_CSV = os.path.join(RESULTS_DIR, "results_summary.csv")
 RUN_INFO_JSON = os.path.join(RESULTS_DIR, "run_info.json")
 
 # raw Claude responses, one JSON line per request (see common/claude_batches.py)

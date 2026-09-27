@@ -25,26 +25,31 @@ def fingerprints(smiles_list):
     return [generator.GetFingerprint(Chem.MolFromSmiles(s)) for s in smiles_list]
 
 
-train = pd.read_csv(config.TRAIN_REAL_CSV)
-test = pd.read_csv(config.TEST_REAL_CSV)
-train_fps = fingerprints(train["smiles"])
-similarity = np.array([max(DataStructs.BulkTanimotoSimilarity(fp, train_fps)) for fp in fingerprints(test["smiles"])])
+def main():
+    train = pd.read_csv(config.TRAIN_REAL_CSV)
+    test = pd.read_csv(config.TEST_REAL_CSV)
+    train_fps = fingerprints(train["smiles"])
+    similarity = np.array([max(DataStructs.BulkTanimotoSimilarity(fp, train_fps)) for fp in fingerprints(test["smiles"])])
 
-pd.DataFrame({"smiles": test["smiles"], "max_tanimoto_to_train": similarity.round(4)}).to_csv(
-    os.path.join(config.RESULTS_DIR, "test_similarity.csv"), index=False)
+    pd.DataFrame({"smiles": test["smiles"], "max_tanimoto_to_train": similarity.round(4)}).to_csv(
+        config.TEST_SIMILARITY_CSV, index=False)
 
-bins = pd.cut(similarity, config.SIMILARITY_BINS, right=False)
-table = pd.Series(bins).value_counts().sort_index()
-quantiles = {f"q{int(q * 100)}": round(float(np.quantile(similarity, q)), 3) for q in [0.05, 0.25, 0.5, 0.75, 0.95]}
-print(f"Maximum Tanimoto similarity of the {len(test)} test polymers to the {len(train)} training polymers")
-print(f"  quantiles: {quantiles}")
-for interval, n in table.items():
-    print(f"  {str(interval):<14} {n:>5}  ({100 * n / len(test):.1f} %)")
-n_identical = int((similarity >= 0.9999).sum())
-print(f"  test polymers with a training polymer of identical fingerprint (similarity 1.0): {n_identical} "
-      f"({100 * n_identical / len(test):.1f} %). These are not duplicates (both keys differ); they are mostly homologues.")
+    bins = pd.cut(similarity, config.SIMILARITY_BINS, right=False)
+    table = pd.Series(bins).value_counts().sort_index()
+    quantiles = {f"q{int(q * 100)}": round(float(np.quantile(similarity, q)), 3) for q in [0.05, 0.25, 0.5, 0.75, 0.95]}
+    print(f"Maximum Tanimoto similarity of the {len(test)} test polymers to the {len(train)} training polymers")
+    print(f"  quantiles: {quantiles}")
+    for interval, n in table.items():
+        print(f"  {str(interval):<14} {n:>5}  ({100 * n / len(test):.1f} %)")
+    n_identical = int((similarity >= 0.9999).sum())
+    print(f"  test polymers with a training polymer of identical fingerprint (similarity 1.0): {n_identical} "
+          f"({100 * n_identical / len(test):.1f} %). These are not duplicates (both keys differ); they are mostly homologues.")
 
-run_info.update({"test_similarity_to_train": {
-    "fingerprint": f"Morgan radius {config.FINGERPRINT_RADIUS}, {config.FINGERPRINT_BITS} bits, Tanimoto",
-    "quantiles": quantiles, "bins": {str(k): int(v) for k, v in table.items()},
-    "n_identical_fingerprint": n_identical}})
+    run_info.update({"test_similarity_to_train": {
+        "fingerprint": f"Morgan radius {config.FINGERPRINT_RADIUS}, {config.FINGERPRINT_BITS} bits, Tanimoto",
+        "quantiles": quantiles, "bins": {str(k): int(v) for k, v in table.items()},
+        "n_identical_fingerprint": n_identical}})
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,28 @@
+\begin{tabular}{@{}ll@{}}
+\toprule
+Setting & Value \\
+\midrule
+Random seed for the data split and samples & 42 \\
+Training seeds & 42, 43, 44, 45, 46 \\
+Test fraction / validation fraction of the rest & 0.2 / 0.1 \\
+LLM & \texttt{claude-sonnet-5} \\
+Extended thinking & disabled \\
+Sampling parameters & none set (not accepted by the model) \\
+Pairs requested per generation request & 50 \\
+Generation requests per round / hard cap & 200 / 400 \\
+Generation target (clean pairs) & 10,000 \\
+\texttt{max\_tokens} generation / labeling / labeling retry & 8000 / 200 / 600 \\
+PI1M polymers sampled & 10,000 \\
+Plausible \Tg{} range & $[-150, 500]$\,\unit{\celsius} \\
+Real subsets (nested, per seed) & 250, 500, 1,000, full \\
+MoLFormer checkpoint & \texttt{ibm/MoLFormer-XL-both-10pct} \\
+Learning rate / batch size & 3e-05 / 16 \\
+Optimizer / loss & AdamW / MSE on standardized \Tg{} \\
+Early stopping & validation MAE after every epoch, patience 3, best weights kept \\
+Maximum epochs, real data / stage 1 & 30 / 10 \\
+Maximum SMILES tokens & 128 \\
+Random forest trees & 500 \\
+Morgan fingerprint bits / radius & 2048 / 2 \\
+Bootstrap resamples & 1,000 \\
+\bottomrule
+\end{tabular}

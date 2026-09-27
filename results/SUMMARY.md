@@ -196,9 +196,11 @@ the random forest never benefits from synthetic data.
   runs exactly. Real only improves from 39.0 to 37.7 (n = 250) and from 35.8 to 34.1 (n = 500);
   the two-stage runs improve by only 0.2 to 0.6. The gain of a synthetic first stage shrinks
   to -3.4 (generated) and -3.9 (labeled) at n = 250, both 5/5 seeds, and to -1.5 (4/5 seeds,
-  p = 0.06) and -2.1 (5/5, p = 0.008) at n = 500. So a fifth to a quarter of the gain at 250 and
-  about 40 % of it at 500 came from the baseline stopping early; the conservative estimate is 3 to 4 °C
-  at 250 and about 2 °C at 500. The controls and n >= 1,000 were not repeated with patience 10.
+  p = 0.06) and -2.1 (5/5, p = 0.008) at n = 500. So 16 % (labeled) to 23 % (generated) of the gain at
+  250, and 39 % to 48 % of it at 500, came from the baseline stopping early; the conservative estimate
+  is 3 to 4 °C at 250 for both sets, and at 500 about 2 °C for the labeled set while the generated
+  set's -1.5 sits inside the seed-to-seed resolution and is marginal. The controls and n >= 1,000 were
+  not repeated with patience 10.
 - Target standardization: stage 1 uses the synthetic set's own mean and SD, stage 2 the real subset's,
   and the output layer is rescaled at the handover so that the network predicts exactly the same
   temperatures before and after (checked to 3e-5 C).
@@ -223,7 +225,8 @@ the random forest never benefits from synthetic data.
 ## 14. Files
 
 `results.csv` (one row per run), `results_summary.csv`, `tables/` (every table above as CSV and
-`all_tables.md`), `figures/` (learning_curve, controls_n500, predicted_vs_true, tg_histograms),
+`all_tables.md`; `tables/latex/` holds the LaTeX tables and number macros of the paper), `figures/` (the
+figures of the paper and the SI as PDF and PNG),
 `predictions/` and `runs/` (one CSV and one JSON per run), `pseudo_labels/` (the self-training labels),
 `memorization.csv`, `zero_shot_predictions.csv`, `zero_shot_metrics.json`, `zero_shot_by_tg_bin.csv`,
 `api_cost.csv`, `test_similarity.csv`, `logs/`, `run_info.json`. `stage1_weights/` (1.8 GB) is a cache

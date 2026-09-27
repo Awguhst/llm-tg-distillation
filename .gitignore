@@ -24,3 +24,5 @@ paper/
 
 # cached stage-1 weights (about 180 MB each); every result derived from them is in results/
 results/stage1_weights/
+.pytest_cache/
+.ruff_cache/

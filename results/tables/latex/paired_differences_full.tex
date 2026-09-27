@@ -1,0 +1,44 @@
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Comparison (first minus second), $n_\mathrm{real}$ & $\Delta$MAE (\unit{\celsius}) & Range & Same sign & $p$ (paired $t$) & $p$ (Wilcoxon) \\
+\midrule
+\multicolumn{6}{@{}l}{\emph{Synthetic first stage against real data alone}} \\
+\quad Generated $\rightarrow$ real vs.\ real only, 250 & \num{-4.5} $\pm$ 1.5 & [\num{-6.9}, \num{-2.9}] & 5/5 & 0.002 & 0.06 \\
+\quad Labeled $\rightarrow$ real vs.\ real only, 250 & \num{-4.8} $\pm$ 1.6 & [\num{-7.5}, \num{-3.6}] & 5/5 & 0.003 & 0.06 \\
+\quad Generated $\rightarrow$ real vs.\ real only, 500 & \num{-2.7} $\pm$ 1.4 & [\num{-4.5}, \num{-1.1}] & 5/5 & 0.01 & 0.06 \\
+\quad Labeled $\rightarrow$ real vs.\ real only, 500 & \num{-3.4} $\pm$ 1.6 & [\num{-6.1}, \num{-2.2}] & 5/5 & 0.009 & 0.06 \\
+\quad Generated $\rightarrow$ real vs.\ real only, 1{,}000 & \num{-1.8} $\pm$ 2.9 & [\num{-6.7}, \num{+0.3}] & 4/5 & 0.23 & 0.19 \\
+\quad Labeled $\rightarrow$ real vs.\ real only, 1{,}000 & \num{-2.1} $\pm$ 2.1 & [\num{-5.8}, \num{-0.4}] & 5/5 & 0.09 & 0.06 \\
+\quad Generated $\rightarrow$ real vs.\ real only, 5,297 & \num{-0.3} $\pm$ 0.3 & [\num{-0.6}, \num{+0.2}] & 4/5 & 0.09 & 0.12 \\
+\quad Labeled $\rightarrow$ real vs.\ real only, 5,297 & \num{-0.4} $\pm$ 1.9 & [\num{-2.9}, \num{+2.5}] & 4/5 & 0.64 & 0.44 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\emph{Concatenation against real data alone}} \\
+\quad Real + generated vs.\ real only, 500 & \num{-2.9} $\pm$ 2.0 & [\num{-4.8}, \num{+0.4}] & 4/5 & 0.03 & 0.12 \\
+\quad Real + labeled vs.\ real only, 500 & \num{-3.0} $\pm$ 1.2 & [\num{-5.0}, \num{-2.1}] & 5/5 & 0.004 & 0.06 \\
+\quad Real + generated vs.\ real only, 5,297 & \num{-1.1} $\pm$ 1.3 & [\num{-2.6}, \num{+0.9}] & 4/5 & 0.13 & 0.19 \\
+\quad Real + labeled vs.\ real only, 5,297 & \num{+0.8} $\pm$ 1.2 & [\num{-0.9}, \num{+2.4}] & 4/5 & 0.18 & 0.31 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\emph{Two-stage against concatenation}} \\
+\quad Two-stage vs.\ concatenation, generated, 500 & \num{+0.1} $\pm$ 1.5 & [\num{-2.3}, \num{+1.7}] & 4/5 & 0.85 & 0.62 \\
+\quad Two-stage vs.\ concatenation, labeled, 500 & \num{-0.3} $\pm$ 0.5 & [\num{-1.1}, \num{+0.3}] & 4/5 & 0.23 & 0.31 \\
+\quad Two-stage vs.\ concatenation, generated, 5,297 & \num{+0.8} $\pm$ 1.3 & [\num{-1.2}, \num{+2.0}] & 4/5 & 0.23 & 0.31 \\
+\quad Two-stage vs.\ concatenation, labeled, 5,297 & \num{-1.3} $\pm$ 2.8 & [\num{-3.8}, \num{+3.4}] & 4/5 & 0.35 & 0.44 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\emph{Controls with 500 real polymers}} \\
+\quad Self-training vs.\ LLM labels, 500 & \num{+2.0} $\pm$ 0.7 & [\num{+1.2}, \num{+2.9}] & 5/5 & 0.003 & 0.06 \\
+\quad Self-training $\rightarrow$ real vs.\ real only, 500 & \num{-1.4} $\pm$ 1.3 & [\num{-3.7}, \num{-0.4}] & 5/5 & 0.09 & 0.06 \\
+\quad Shuffled vs.\ original labels, generated, 500 & \num{+21.3} $\pm$ 16.8 & [\num{+8.6}, \num{+48.8}] & 5/5 & 0.05 & 0.06 \\
+\quad Shuffled vs.\ original labels, labeled, 500 & \num{+7.0} $\pm$ 6.2 & [\num{+1.6}, \num{+15.7}] & 5/5 & 0.06 & 0.06 \\
+\quad Shuffled generated $\rightarrow$ real vs.\ real only, 500 & \num{+18.6} $\pm$ 16.4 & [\num{+6.4}, \num{+45.0}] & 5/5 & 0.06 & 0.06 \\
+\quad Shuffled labeled $\rightarrow$ real vs.\ real only, 500 & \num{+3.6} $\pm$ 7.0 & [\num{-2.0}, \num{+13.4}] & 3/5 & 0.31 & 0.62 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\emph{Synthetic data alone}} \\
+\quad Labeled only vs.\ generated only & \num{+1.7} $\pm$ 0.7 & [\num{+1.0}, \num{+2.8}] & 5/5 & 0.005 & 0.06 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\emph{Random forest}} \\
+\quad Random forest: real + generated vs.\ real, 500 & \num{-0.5} $\pm$ 0.8 & [\num{-1.7}, \num{+0.2}] & 4/5 & 0.24 & 0.31 \\
+\quad Random forest: real + labeled vs.\ real, 500 & \num{-0.1} $\pm$ 0.5 & [\num{-0.8}, \num{+0.4}] & 3/5 & 0.71 & 0.62 \\
+\quad Random forest: real + generated vs.\ real, 5,297 & \num{+0.8} $\pm$ 0.1 & [\num{+0.6}, \num{+0.9}] & 5/5 & $<$0.001 & 0.06 \\
+\quad Random forest: real + labeled vs.\ real, 5,297 & \num{+1.1} $\pm$ 0.1 & [\num{+0.9}, \num{+1.1}] & 5/5 & $<$0.001 & 0.06 \\
+\bottomrule
+\end{tabular}

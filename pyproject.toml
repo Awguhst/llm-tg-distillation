@@ -1,0 +1,36 @@
+[project]
+name = "llm-tg-distillation"
+version = "1.0.0"
+description = "Language-model-derived training data for polymer glass transition prediction: a controlled benchmark"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Rostislav Rusev", email = "rslav.rusev@gmail.com" }]
+# The published results were produced with Python 3.14.4 and the versions pinned below. torch was the
+# CUDA 13.0 build, 2.13.0+cu130, installed from https://download.pytorch.org/whl/cu130; the CPU wheel
+# from PyPI runs the same code (slowly). requirements.txt carries these same pins and, additionally,
+# pytest, which is needed only to run the tests and played no part in producing the results.
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "anthropic==1.6.0",
+    "pandas==3.0.3",
+    "numpy==2.4.6",
+    "scipy==1.18.0",
+    "rdkit==2026.3.3",
+    "scikit-learn==1.9.0",
+    "torch==2.13.0",
+    "transformers==5.17.0",
+    "matplotlib==3.11.0",
+    "python-dotenv==1.2.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.urls]
+Repository = "https://github.com/Awguhst/llm-tg-distillation"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["pipeline"]
+markers = ["slow: trains MoLFormer for one epoch on a CPU; run with  pytest -m slow"]
+addopts = "-m 'not slow'"

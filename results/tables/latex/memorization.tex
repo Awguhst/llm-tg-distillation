@@ -1,0 +1,15 @@
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Real split & Match & $n$ & \% of unique & MAE & Median AE & $\rho$ & Mean signed error \\
+\midrule
+train & exact SMILES & 319 & 4.0 & 26.7 & 18.0 & 0.90 & \num{-4.0} \\
+train & ring key only & 184 & 2.3 & 33.2 & 21.8 & 0.92 & \num{-21.8} \\
+train & either key & 503 & 6.2 & 29.1 & 19.0 & 0.91 & \num{-10.5} \\
+validation & exact SMILES & 27 & 0.3 & 26.8 & 11.8 & 0.94 & \num{-0.9} \\
+validation & ring key only & 27 & 0.3 & 24.5 & 18.0 & 0.97 & \num{-17.2} \\
+validation & either key & 54 & 0.7 & 25.6 & 17.5 & 0.95 & \num{-9.0} \\
+test & exact SMILES & 79 & 1.0 & 27.8 & 16.3 & 0.87 & \num{-1.4} \\
+test & ring key only & 32 & 0.4 & 33.4 & 24.8 & 0.84 & \num{-6.7} \\
+test & either key & 111 & 1.4 & 29.4 & 17.0 & 0.86 & \num{-2.9} \\
+\bottomrule
+\end{tabular}

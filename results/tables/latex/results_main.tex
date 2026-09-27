@@ -1,0 +1,24 @@
+\begin{tabular}{@{}llll@{}}
+\toprule
+ & \multicolumn{3}{c}{First stage before the real polymers} \\
+\cmidrule(lr){2-4}
+Real polymers & None (real only) & Generated set & Labeled set \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Two-stage: synthetic first, then real (main protocol, patience 3)}} \\
+\quad 250 & 39.1 $\pm$ 1.4 & 34.6 $\pm$ 0.6 & 34.3 $\pm$ 0.7 \\
+\quad 500 & 35.9 $\pm$ 1.4 & 33.2 $\pm$ 0.9 & 32.5 $\pm$ 0.8 \\
+\quad 1{,}000 & 32.3 $\pm$ 2.5 & 30.5 $\pm$ 1.0 & 30.2 $\pm$ 0.7 \\
+\quad 5,297 & 25.2 $\pm$ 1.2 & 24.9 $\pm$ 1.0 & 24.8 $\pm$ 2.0 \\
+\addlinespace
+\multicolumn{4}{@{}l}{\emph{Two-stage, against a real-only baseline trained to convergence (patience 10; separate runs)}} \\
+\quad 250 & 37.7 $\pm$ 0.7 & 34.4 $\pm$ 0.5 & 33.9 $\pm$ 0.6 \\
+\quad 500 & 34.1 $\pm$ 0.9 & 32.6 $\pm$ 0.9 & 32.0 $\pm$ 0.7 \\
+\addlinespace
+\multicolumn{4}{@{}l}{\emph{Concatenation: real + synthetic in one training set}} \\
+\quad 500 & 35.9 $\pm$ 1.4 & 33.0 $\pm$ 0.9 & 32.8 $\pm$ 0.7 \\
+\quad 5,297 & 25.2 $\pm$ 1.2 & 24.1 $\pm$ 0.7 & 26.1 $\pm$ 1.3 \\
+\addlinespace\midrule
+\quad 0 (synthetic data only) & -- & 36.8 $\pm$ 0.6 & 38.5 $\pm$ 0.7 \\
+\multicolumn{4}{@{}l}{Teacher, zero-shot: 37.3 (95\,\% CI 35.7 to 39.1)} \\
+\bottomrule
+\end{tabular}

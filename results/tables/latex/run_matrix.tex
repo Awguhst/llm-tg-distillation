@@ -1,0 +1,19 @@
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & \multicolumn{5}{c}{Real training polymers} \\
+\cmidrule(lr){2-6}
+Configuration & 0 & 250 & 500 & 1{,}000 & 5,297 \\
+\midrule
+Real only (MoLFormer) & -- & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+Two-stage: generated set, then real & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+Two-stage: labeled set, then real & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+Concatenation: real + generated & -- & -- & $\bullet$ & -- & $\bullet$ \\
+Concatenation: real + labeled & -- & -- & $\bullet$ & -- & $\bullet$ \\
+Control: self-training labels, then real & $\bullet$ & -- & $\bullet$ & -- & -- \\
+Control: generated set with shuffled \Tg, then real & $\bullet$ & -- & $\bullet$ & -- & -- \\
+Control: labeled set with shuffled \Tg, then real & $\bullet$ & -- & $\bullet$ & -- & -- \\
+Random forest, real only & -- & -- & $\bullet$ & -- & $\bullet$ \\
+Random forest, real + generated & $\bullet$ & -- & $\bullet$ & -- & $\bullet$ \\
+Random forest, real + labeled & $\bullet$ & -- & $\bullet$ & -- & $\bullet$ \\
+\bottomrule
+\end{tabular}

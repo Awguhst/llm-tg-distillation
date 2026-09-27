@@ -1,0 +1,18 @@
+\begin{tabular}{@{}lllll@{}}
+\toprule
+ & & \multicolumn{3}{c}{After the 500 real polymers} \\
+\cmidrule(lr){3-5}
+First stage & Stage-1 model alone & MAE & RMSE & $R^2$ \\
+\midrule
+None (real only) & -- & 35.9 $\pm$ 1.4 & 48.8 $\pm$ 2.0 & 0.806 $\pm$ 0.015 \\
+\addlinespace
+\multicolumn{5}{@{}l}{\emph{First stage on the labeled set (PI1M structures)}} \\
+\quad LLM labels & 38.5 $\pm$ 0.7 & 32.5 $\pm$ 0.8 & 45.1 $\pm$ 1.5 & 0.834 $\pm$ 0.011 \\
+\quad Self-training labels & 36.2 $\pm$ 1.0 & 34.5 $\pm$ 1.0 & 47.5 $\pm$ 1.7 & 0.816 $\pm$ 0.013 \\
+\quad LLM labels, shuffled & 105.0 $\pm$ 4.9 & 39.5 $\pm$ 5.8 & 53.2 $\pm$ 7.5 & 0.766 $\pm$ 0.066 \\
+\addlinespace
+\multicolumn{5}{@{}l}{\emph{First stage on the generated set}} \\
+\quad LLM labels & 36.8 $\pm$ 0.6 & 33.2 $\pm$ 0.9 & 45.5 $\pm$ 1.6 & 0.831 $\pm$ 0.012 \\
+\quad LLM labels, shuffled & 97.1 $\pm$ 2.1 & 54.5 $\pm$ 16.7 & 70.4 $\pm$ 19.9 & 0.571 $\pm$ 0.256 \\
+\bottomrule
+\end{tabular}

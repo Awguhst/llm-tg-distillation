@@ -1,0 +1,19 @@
+\begin{tabular}{@{}lrlrl@{}}
+\toprule
+ & \multicolumn{2}{c}{Generated} & \multicolumn{2}{c}{Labeled (PI1M)} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+Step & Rows kept & (removed) & Rows kept & (removed) \\
+\midrule
+Raw pairs from the responses & 20,086 &  & 10,000 &  \\
+1. Numeric \Tg & 20,085 & (1) & 10,000 & (0) \\
+2. RDKit parses the SMILES & 19,554 & (531) & 9,933 & (67) \\
+3. Exactly two \texttt{*} & 18,430 & (1,124) & 9,933 & (0) \\
+4. \Tg{} in $[-150, 500]$\,\unit{\celsius} & 18,430 & (0) & 9,933 & (0) \\
+\addlinespace
+5. Duplicates merged, exact SMILES & 8,501 & (9,929) & 9,933 & (0) \\
+\quad and by the ring key & 8,077 & (424) & 9,929 & (4) \\
+\addlinespace
+6. Test polymers removed & 7,966 & (111) & 9,926 & (3) \\
+\quad and validation polymers & 7,912 & (54) & 9,925 & (1) \\
+\bottomrule
+\end{tabular}

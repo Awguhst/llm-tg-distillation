@@ -9,3 +9,5 @@ torch==2.13.0          # the run used the CUDA 13.0 build (2.13.0+cu130)
 transformers==5.17.0
 matplotlib==3.11.0
 python-dotenv==1.2.2
+# not needed to produce the results, only to run the tests (`python -m pytest`)
+pytest>=8

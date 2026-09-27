@@ -57,68 +57,74 @@ def parsed_pairs(saved):
 
 # ---------------------------------------------------------------- main loop
 
-client = claude_batches.get_client()
-# All 400 requests of the published run are saved, so this script sends nothing more; it only
-# rebuilds data/generated_raw.csv.
-held_out = {"test": KeySet(pd.read_csv(config.TEST_REAL_CSV)["smiles"]),
-            "validation": KeySet(pd.read_csv(config.VAL_REAL_CSV)["smiles"])}
-round_size = config.PILOT_GENERATION_REQUESTS if config.PILOT else config.GENERATION_ROUND_REQUESTS
-max_requests = config.PILOT_GENERATION_REQUESTS if config.PILOT else config.GENERATION_MAX_REQUESTS
-stop_reason = None
 
-while True:
-    saved = claude_batches.load_saved_responses(config.GENERATED_RESPONSES)
-    raw, n_invalid = parsed_pairs(saved)
-    clean, counts = clean_dataset(raw, held_out) if len(raw) > 0 else (raw, {})
-    print(f"\nSaved responses: {len(saved)} ({n_invalid} with invalid JSON) -> "
-          f"{len(raw)} raw pairs -> {len(clean)} clean unique pairs (target {config.GENERATION_TARGET})")
+def main():
+    client = claude_batches.get_client()
+    # All 400 requests of the published run are saved, so this script sends nothing more; it only
+    # rebuilds data/generated_raw.csv.
+    held_out = {"test": KeySet(pd.read_csv(config.TEST_REAL_CSV)["smiles"]),
+                "validation": KeySet(pd.read_csv(config.VAL_REAL_CSV)["smiles"])}
+    round_size = config.PILOT_GENERATION_REQUESTS if config.PILOT else config.GENERATION_ROUND_REQUESTS
+    max_requests = config.PILOT_GENERATION_REQUESTS if config.PILOT else config.GENERATION_MAX_REQUESTS
+    stop_reason = None
 
-    if len(clean) >= config.GENERATION_TARGET:
-        stop_reason = "target reached"
-        break
+    while True:
+        saved = claude_batches.load_saved_responses(config.GENERATED_RESPONSES)
+        raw, n_invalid = parsed_pairs(saved)
+        clean, counts = clean_dataset(raw, held_out) if len(raw) > 0 else (raw, {})
+        print(f"\nSaved responses: {len(saved)} ({n_invalid} with invalid JSON) -> "
+              f"{len(raw)} raw pairs -> {len(clean)} clean unique pairs (target {config.GENERATION_TARGET})")
 
-    # Request ids that still need a response, in order, limited to the cap.
-    todo = [i for i in range(max_requests) if f"gen_{i:04d}" not in saved]
-    if not todo:
-        stop_reason = "pilot finished" if config.PILOT else f"hard cap of {max_requests} requests reached"
-        break
-    todo = todo[:round_size]
+        if len(clean) >= config.GENERATION_TARGET:
+            stop_reason = "target reached"
+            break
 
-    requests, metadata = [], {}
-    for i in todo:
-        request, meta = build_request(i)
-        requests.append(request)
-        metadata[request["custom_id"]] = meta
+        # Request ids that still need a response, in order, limited to the cap.
+        todo = [i for i in range(max_requests) if f"gen_{i:04d}" not in saved]
+        if not todo:
+            stop_reason = "pilot finished" if config.PILOT else f"hard cap of {max_requests} requests reached"
+            break
+        todo = todo[:round_size]
 
-    claude_batches.estimate_and_confirm(client, requests, config.GENERATION_EXPECTED_OUTPUT_TOKENS)
-    claude_batches.run_requests(client, requests, config.GENERATED_RESPONSES, metadata)
+        requests, metadata = [], {}
+        for i in todo:
+            request, meta = build_request(i)
+            requests.append(request)
+            metadata[request["custom_id"]] = meta
 
-# ---------------------------------------------------------------- summary
+        claude_batches.estimate_and_confirm(client, requests, config.GENERATION_EXPECTED_OUTPUT_TOKENS)
+        claude_batches.run_requests(client, requests, config.GENERATED_RESPONSES, metadata)
 
-if counts:
-    print_counts(counts, "generated (all rounds so far)")
-raw.to_csv(config.GENERATED_RAW_CSV, index=False)
-print(f"\nStopped because: {stop_reason}")
-print(f"Saved {len(raw)} raw pairs -> {config.GENERATED_RAW_CSV}")
-if len(clean) < config.GENERATION_TARGET and not config.PILOT:
-    print(f"Only {len(clean)} clean pairs. The model may be repeating polymers. "
-          f"Raise GENERATION_MAX_REQUESTS in config.py only if the budget allows it.")
+    # ---------------------------------------------------------------- summary
 
-# Show a few example responses so they can be checked by eye.
-for record in list(saved.values())[:2]:
-    print(f"\n--- example response {record['custom_id']} ({record['polymer_class']}) ---")
-    print(record["text"][:600])
+    if counts:
+        print_counts(counts, "generated (all rounds so far)")
+    raw.to_csv(config.GENERATED_RAW_CSV, index=False)
+    print(f"\nStopped because: {stop_reason}")
+    print(f"Saved {len(raw)} raw pairs -> {config.GENERATED_RAW_CSV}")
+    if len(clean) < config.GENERATION_TARGET and not config.PILOT:
+        print(f"Only {len(clean)} clean pairs. The model may be repeating polymers. "
+              f"Raise GENERATION_MAX_REQUESTS in config.py only if the budget allows it.")
 
-run_info.update({
-    "generation_model": config.LLM_MODEL,
-    "generation_thinking": config.THINKING,
-    "generation_prompt_template": prompts.GENERATION_PROMPT,
-    "generation_variants": prompts.GENERATION_VARIANTS,
-    "generation_requests_sent": len(saved),
-    "generation_invalid_json_responses": n_invalid,
-    "generation_raw_pairs": int(len(raw)),
-    "generation_clean_pairs_before_sampling": int(len(clean)),
-    "generation_stop_reason": stop_reason,
-    "generation_dates": sorted({r["date"] for r in saved.values()}),
-    "generation_cost_usd": round(sum(r["cost_usd"] for r in saved.values()), 4),
-})
+    # Show a few example responses so they can be checked by eye.
+    for record in list(saved.values())[:2]:
+        print(f"\n--- example response {record['custom_id']} ({record['polymer_class']}) ---")
+        print(record["text"][:600])
+
+    run_info.update({
+        "generation_model": config.LLM_MODEL,
+        "generation_thinking": config.THINKING,
+        "generation_prompt_template": prompts.GENERATION_PROMPT,
+        "generation_variants": prompts.GENERATION_VARIANTS,
+        "generation_requests_sent": len(saved),
+        "generation_invalid_json_responses": n_invalid,
+        "generation_raw_pairs": int(len(raw)),
+        "generation_clean_pairs_before_sampling": int(len(clean)),
+        "generation_stop_reason": stop_reason,
+        "generation_dates": sorted({r["date"] for r in saved.values()}),
+        "generation_cost_usd": round(sum(r["cost_usd"] for r in saved.values()), 4),
+    })
+
+
+if __name__ == "__main__":
+    main()
