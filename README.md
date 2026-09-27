@@ -9,9 +9,9 @@ Code, data and per-run outputs for the preprint
 
 Can data written by a large language model replace or supplement experimental measurements for
 predicting the glass transition temperature (Tg) of polymers? We ask Claude Sonnet 5 for two kinds of
-synthetic data — a **generated** set, where it invents both the repeat unit and the Tg, and a
+synthetic data - a **generated** set, where it invents both the repeat unit and the Tg, and a
 **labeled** set, where it assigns a Tg to hypothetical [PI1M](https://github.com/RUIMINMA1996/PI1M)
-structures — and benchmark both against real measurements on a common held-out test set, along a
+structures - and benchmark both against real measurements on a common held-out test set, along a
 learning curve of 250 to 5,297 real polymers, with controls that separate the value of the LLM's Tg
 values from the value of merely seeing more structures.
 
