@@ -2,13 +2,11 @@
 
 **Rostislav Rusev**
 
-[![ChemRxiv](https://img.shields.io/badge/ChemRxiv-10.26434%2Fchemrxiv.15009353%2Fv2-b31b1b.svg)](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15009353/v2)
+[![ChemRxiv](https://img.shields.io/badge/ChemRxiv-10.26434%2Fchemrxiv.15009353-b31b1b.svg)](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15009353/v2)
 [![Data](https://img.shields.io/badge/real%20Tg%20data-10.5281%2Fzenodo.15789599-blue.svg)](https://doi.org/10.5281/zenodo.15789599)
 [![License: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
 
-**Preprint (v2):** [https://chemrxiv.org/doi/full/10.26434/chemrxiv.15009353/v2](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15009353/v2)
-&nbsp;·&nbsp; DOI [10.26434/chemrxiv.15009353/v2](https://doi.org/10.26434/chemrxiv.15009353/v2)
-&nbsp;·&nbsp; Earlier version: [v1](https://doi.org/10.26434/chemrxiv.15009353/v1)
+**Preprint:** [ChemRxiv](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15009353/v2)
 
 This repository contains the code, data and per-run outputs that accompany the preprint. Every number
 in the manuscript is generated from the files here.
@@ -305,7 +303,6 @@ If you use this code or data, please cite:
   author  = {Rusev, Rostislav},
   journal = {ChemRxiv},
   year    = {2026},
-  note    = {Version 2},
   doi     = {10.26434/chemrxiv.15009353/v2},
   url     = {https://chemrxiv.org/doi/full/10.26434/chemrxiv.15009353/v2}
 }
